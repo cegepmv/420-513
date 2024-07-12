@@ -13,7 +13,7 @@ La _reconnaissance passive_ concerne les informations qu’on peut se procurer s
 + Les domaines, sous-domaines et noms d’hôtes
 
 
-#### Google _dorks_
+## Google _dorks_
 
 Les moteurs de recherche (_Google, Bing_ ou autres), ou encore d’autres plateformes ayant un outil de recherche (_GitHub, StackOverflow_ ou _ServerFault_, etc.) disposent souvent de nombreux filtres qui permettent d’accéder à des informations de manière très ciblée :
 
@@ -41,7 +41,7 @@ inurl:admin.php domain:abc.com
 Les développeurs de Kali maintiennent une base de données des filtres de recherches utiles à des fins de recherche d’informations: https://www.exploit-db.com/google-hacking-database
 {{% /notice %}}
 
-#### whois
+## whois
 
 Utilitaire sur la ligne de commande linux qui retourne les informations relatives aux enregistrements de domaines DNS ou d’adresses IP. Celles-ci peuvent inclure les coordonnées de l’entreprise ou organisation responsable de ces adresses ou domaines, des noms et adresses de courriel d’employés, ou des noms de serveurs. 
 
@@ -55,7 +55,7 @@ Pour obtenir des informations sur une adresse IP:
 whois 15.156.222.71
 ```
 
-#### theHarvester
+## theHarvester
 
 _theHarvester_ est un programme qui recherche des informations à propos d’un domaine sur le web à partir de différents moteurs de recherche. 
 
@@ -75,6 +75,6 @@ Quelques options utiles:
   
 {{% notice warning "Attention" %}}
 La plupart des moteurs de recherche sont protégés contre les requêtes scriptées trop fréquentes : il est possible que _theHarvester_ soit rapidement bloqué.
- {{% /notice %}}
+{{% /notice %}}
 
 
