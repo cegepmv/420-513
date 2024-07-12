@@ -2,7 +2,7 @@
 title = "Phases d'une cyberattaque"
 date = 2024-07-09T14:08:00-04:00
 draft = false
-weight = 15
+weight = 16
 +++
 
 Une cyberattaque comprend plusieurs étapes. Celles-ci peuvent être plus ou moins nombreuses selon les objectifs de l'attaque. 

@@ -57,7 +57,7 @@ Il est possible d'utiliser ssh simplement pour lancer une commande sur le serveu
 
 Pour ce faire il suffit de passer la commande et ses arguments à la suite de la commande de connexion. Par exemple pour voir le contenu du fichier `/etc/hosts` sur le serveur distant:
 ```
-kali@kali:~$ ssh admin@172.16.70.148 cat /etc/hosts
+kali@kali:~$ ssh admin@172.16.70.148 "cat /etc/hosts"
 127.0.0.1	localhost
 127.0.1.1	sv12
 ::1		localhost ip6-localhost ip6-loopback
@@ -69,7 +69,27 @@ Si la commande est une application graphique, utiliser l'option `-X` nous permet
 ```
 kali@kali:~$ ssh -X admin@172.16.70.148 firefox
 ```
-Attention, pour ce faire le serveur doit avoir la directive `X11Forwarding yes` dans sa configuration.
+Notez cependant que pour cela soit possible, le _serveur_ doit avoir la directive `X11Forwarding yes` dans sa configuration.
+
+{{% notice tip "Attention" %}}
+Si le programme à exécuter nécessite une élévation de privilèges avec _sudo_, il faut utiliser l'option **_-S_** de _sudo_ car le mode interactif est impossible avec _ssh_:
+```
+ssh olivier@10.30.0.78 "sudo -S systemctl apache2 stop"
+```
+{{% /notice %}}
+ 
+En élaborant un peu, ceci permet d'écrire dans des fichiers sur l'hôte distant:
+```
+ssh olivier@10.30.0.78 "echo bonjour > /home/olivier/salutations.txt"
+```
+
+En utilisant la redirection de commandes, on peut aussi copier des fichiers:
+```
+cat programme.py | ssh olivier@10.30.0.78 "cat > /home/olivier/programme.py"
+```
+(Cela dit il est certainement plus simple d'utiliser **_scp_** pour transférer des fichiers par _ssh_...)
+
+
 
 
 
