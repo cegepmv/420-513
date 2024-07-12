@@ -127,7 +127,7 @@ wfuzz -c -z name,Peter-Parker -z file,mdp.txt "http://www.site.com/log.php?user=
 Le programme _ffuf_ combine certaines fonctionnalités des programmes précédents, tout en étant plus rapide et un peu plus simple d'utilisation. Il ne permet pas de générer des URL aussi complexes que _wfuzz_ par contre.
 
 #### Syntaxe
-`ffuf OPTIONS URL`
+`ffuf OPTIONS`
 
 #### Options utiles
 + `-c`: Affichage en couleurs
@@ -149,5 +149,5 @@ ffuf -c -u http://www.magoo.com/ -X POST -d "user=FUZZ" -w liste.txt
 ```
 Rechercher des fichiers `.conf` dans le sous-répertoire `/local`:
 ```
-ffuf -c -u http://www.magoo.com/local -e .conf -w liste.txt
+ffuf -c -u http://www.magoo.com/local/FUZZ -e .conf -w liste.txt
 ```
