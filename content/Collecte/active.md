@@ -16,7 +16,7 @@ Assurez-vous donc d'avoir la permission avant d'utiliser ces outils sur des hôt
 {{% /notice %}}
 
 
-#### dnsenum
+## dnsenum
 
 Dans la section précédente, nous avons vu comment utiliser _theHarvester_ pour obtenir des informations sur un domaine. Ces informations sont obtenues de manière passive car _theHarvester_ interroge des moteurs de recherche. Dans cette section par contre, elles sont obtenues de manière active: _dnsenum_ peut en effet interroger directement des serveurs DNS d'un domaine.
 
@@ -34,7 +34,7 @@ Le programme _dnsenum_ a plusieurs options; en voici quelques unes:
 + `-r` : Recherche récursive. Pour chaque sous-domaine trouvé, relance l'attaque par force brutale.
 
 
-#### nmap
+## nmap
 
 Un outil essentiel permettant de découvrir les hôtes d’un réseau et de collecter de nombreuses informations sur ces derniers.
 
