@@ -7,6 +7,8 @@ weight = 16
 
 Une cyberattaque comprend plusieurs étapes. Celles-ci peuvent être plus ou moins nombreuses selon les objectifs de l'attaque. 
 
+En anglais on utilise l'expression "cyber kill chain" (d'origine militaire) pour désigner ces étapes.
+
 Il y a plusieurs opinions quant au nombre et à la nature de chacun de ces étapes, mais on peut les regrouper dans les phases suivantes:
 
 #### Collecte d'informations
@@ -35,3 +37,9 @@ Cette phase regroupe toutes les actions à réaliser lorsque la vulnérabilité 
 - **Maintien de l'accès**: Inclut les tâches visant à faciliter les accès futurs, par exemple détecter un compte inutilisé et changer son mot de passe afin de l'utiliser pour se connecter par la suite.
 - **Pivot**: Changer de cible. Lorsqu'on gagné l'accès sur un système, il est possible que celui-ci permette d'accéder à d'autres systèmes qui étaient hors de portée avant. On reprend donc le cycle à partir de la recherche de vulnérabilités, explitation, etc. pour cette nouvelle cible.
 - **Exfiltration**: Dans le cas où l'objectif de l'attaque est de se procurer des données, le transfert de celles-ci peut être plus ou moins délicat en foncion de leur quantité ou du niveau de surveillance.
+
+--------------------
+#### Références
+- [Mitre att&ck framework](https://attack.mitre.org/): Regroupe en différentes catégories les techniques qui peuvent être utilisées lors d'une cyberattaque.
+- [Lockheed Martin Cyber Kill Chain](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html): Une description des différentes étapes successives d'une cyberattaque. 
+- [Unified Kill Chain](https://www.unifiedkillchain.com/): Une version plus détaillée des pases d'une cyberattaque.
