@@ -1,11 +1,13 @@
 +++
-title = 'SSH'
+title = 'SSH et SCP'
 date = 2024-07-09T14:08:18-04:00
 draft = false
 weight = 14
 +++
 
 SSH (_Secure Shell_) est un service permettant d'établir une connexion chiffrée par ligne de commande ("shell") sur un serveur distant.
+
+SCP est un utilitaire pour transférer par SSH des fichiers entre deux hôtes sur un réseau.
 
 #### Connexion simple
 Pour se connecter à un serveur SSH, il suffit de passer à la commande le nom d'utilisateur suivi du nom d'hôte (ou de son adresse) comme suit:
@@ -89,7 +91,25 @@ cat programme.py | ssh olivier@10.30.0.78 "cat > /home/olivier/programme.py"
 ```
 (Cela dit il est certainement plus simple d'utiliser **_scp_** pour transférer des fichiers par _ssh_...)
 
+#### Transfert de fichiers par _SCP_
 
+Lorsque le service SSH est disponible, on peut l'utiliser pour s'échanger des fichiers. La commande est `scp`.
 
+Cette commande fonctionne un peu comme la commande bash `cp`; elle prend deux arguments, le fichier _source_ et le fichier _cible_:
 
+`scp SOURCE CIBLE`
+
+La source est le fichier d'origine, la cible est la copie qu'on veut créer. Aussi, on peut copier dans les deux sens: lorsque la source est locale, la cible est distante, et lorsque la source est le fichier distant, le cible est locale.
+
+Pour spécifier le fichier local, on utilise son chemin relatif (à partir du répertoire courant, par exemple `fichier.txt`, `../fichier.txt`, etc.) ou absolu (à partir de la racine, par exemple `/home/sam/fichier.txt`).
+
+Pour spécifier le fichier distant, on utilise la même chaîne de connexion que pour SSH suivie du chemin absolu du fichier sur l'hôte distant:
+
+`UTILISATEUR@HOTE:CHEMIN`
+
+Par exemple, pour copier un fichier local nommé "liste.txt" dans le répertoire personnel de l'utilisateur "bob" sur un hôte à l'adresse 10.10.10.238, la commande est la suivante:
+
+```
+scp liste.txt bob@10.10.10.238:/home/bob/liste.txt
+```
 
