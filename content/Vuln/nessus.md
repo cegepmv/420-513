@@ -38,33 +38,48 @@ L’installation de Nessus est très simple et rapide (au début): lancez les co
 
 ```
 ┌──(kali㉿kali)-[~/Downloads]
-└─$ sudo dpkg -i Nessus-8.15.2-debian6_amd64.deb
+└─$ sudo dpkg -i Nessus-10.8.3-ubuntu1604_amd64.deb 
 [sudo] password for kali: 
 Selecting previously unselected package nessus.
-(Reading database ... 271960 files and directories currently installed.)
-Preparing to unpack Nessus-8.15.2-debian6_amd64.deb ...
-Unpacking nessus (8.15.2) ...
-Setting up nessus (8.15.2) ...
+(Reading database ... 392798 files and directories currently installed.)
+Preparing to unpack Nessus-10.8.3-ubuntu1604_amd64.deb ...
+Unpacking nessus (10.8.3) ...
+Setting up nessus (10.8.3) ...
+
+(...)
+
 Unpacking Nessus Scanner Core Components...
 
  - You can start Nessus Scanner by typing /bin/systemctl start nessusd.service
  - Then go to https://kali:8834/ to configure your scanner
 
+                                                                                                                             
 ┌──(kali㉿kali)-[~/Downloads]
-└─$ sudo systemctl start nessusd
+└─$ sudo systemctl start nessusd   
 ```
 
-L’application roule sur le port local 8834 – lancez firefox à l’url https://kali:8834, puis choisissez _Nessus Essentials_ et continuez:
+L’application roule sur le port local 8834 – lancez firefox à l’url `https://kali:8834`, puis faites **Continue** sur la première page.
+
+À la page suivante, choisissez _Register for Nessus Essentials_ et continuez:
 
 ![ness-ess](/420-513/images/ness-ess.png?classes=border,shadow)
 
-Puisque vous avez déjà obtenu votre code d’activation par courriel, choisissez `skip` pour passer à l’étape suivante et saisissez le code à l’endroit spécifié:
+Puisque vous avez déjà obtenu votre code d’activation par courriel, choisissez `Skip` pour passer à l’étape suivante et saisissez le code à l’endroit spécifié:
 
 ![entrer-code](/420-513/images/entrer-code.png?classes=border,shadow)    
 
-La dernière étape consiste à créer l’utilisateur ayant les droits d’administrateur et lui donner un mot de passe. Notez bien ces deux valeurs. 
+La dernière étape consiste à créer l’utilisateur ayant les droits d’administrateur et lui donner un mot de passe. Notez bien ces deux valeurs. Si vous manquez d'inspiration, choisissez "info" et "abc-123".  
 
-Enfin, Nessus prendra une vingtaine de minutes pour télécharger et compiler les données requises pour l’analyse.
+Après cette étape, Nessus prendra une vingtaine de minutes pour télécharger et compiler les données requises pour l’analyse.
+
+{{% notice warning "Attention" %}}
+S'il y a des problèmes au téléchargement et que la page "Download Failed" s'affiche, vous pouvez le relancer avec la commande suivante:
+```
+sudo /opt/nessus/sbin/nessuscli update
+sudo systemctl restart nessus
+```
+{{% /notice %}}
+
 
 #### Analyse de vulnérabilités
 
