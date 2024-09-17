@@ -26,7 +26,7 @@ Ouvrez le fichier `Metasploitable3-ub1404.ova` dans VMWare Workstation. Les iden
 
 Sur _Kali_, téléchargez le paquetage _.deb_ à partir du lien ci-haut. 
 
-Vous devrez remplir un formulaire et donner votre adresse courriel (celle de Maisonneuve) afin de recevoir un code d’activation:
+Vous devrez remplir un formulaire et donner votre adresse courriel (celle de Marie-Victorin) afin de recevoir un code d’activation:
 
 ![act-nessus](/420-513/images/act-nessus.png?classes=border,shadow)
 
