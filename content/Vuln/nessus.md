@@ -15,7 +15,7 @@ Il existe une version gratuite de _Nessus_ qui permet de scanner un maximum de16
 
 + [Nessus](https://fr.tenable.com/products/nessus/nessus-essentials)
 
-<!-- + [Metasploitable 3 (Accès VPN Maisonneuve)](http://10.70.183.96/VM/Metasploitable3-ub1404.ova)
+<!-- + [Metasploitable 3 (Accès VPN Marie-Victorin)](http://10.70.183.96/VM/Metasploitable3-ub1404.ova)
 
 #### Installation de Metasploitable 3
 
@@ -26,7 +26,7 @@ Ouvrez le fichier `Metasploitable3-ub1404.ova` dans VMWare Workstation. Les iden
 
 Sur _Kali_, téléchargez le paquetage _.deb_ à partir du lien ci-haut. 
 
-Vous devrez remplir un formulaire et donner votre adresse courriel (celle de Maisonneuve) afin de recevoir un code d’activation:
+Vous devrez remplir un formulaire et donner votre adresse courriel (celle de Marie-Victorin) afin de recevoir un code d’activation:
 
 ![act-nessus](/420-513/images/act-nessus.png?classes=border,shadow)
 
