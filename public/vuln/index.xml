@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recherche de vulnérabilités :: 420-513</title>
+    <link>http://localhost:1313/420-513/vuln/index.html</link>
+    <description>Après la phase d’énumération, on dispose d’une foule d’informations sur la cible, notamment les serveurs, les applications et les versions de celles-ci. La phase suivante consiste à déterminer s’il existe des failles qui pourraient être exploitées. On nomme ces failles “vulnérabilités”.</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <lastBuildDate>Fri, 26 Jul 2024 13:04:35 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/420-513/vuln/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Types</title>
+      <link>http://localhost:1313/420-513/vuln/types/index.html</link>
+      <pubDate>Fri, 26 Jul 2024 13:01:42 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/vuln/types/index.html</guid>
+      <description>On définit les vulnérabilités logicielles comme suit:&#xA;Une faiblesse dans le code des composantes logicielles ou matérielles qui, lorsqu’elle est exploitée, résulte en un impact négatif sur la confidentialité, l’intégrité ou la disponibilité. La mitigation de ce type de vulnérabilité implique habituellement des modifications du code source.&#xA;(NIST, https://nvd.nist.gov/vuln)&#xA;Dans la majorité des cas, les vulnérabilités logicielles viennent des programmes et applications développés par un tiers parti, et donc les organisations peuvent rarement les éliminer par eux-mêmes.</description>
+    </item>
+    <item>
+      <title>Ressources</title>
+      <link>http://localhost:1313/420-513/vuln/ressources/index.html</link>
+      <pubDate>Fri, 26 Jul 2024 13:04:10 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/vuln/ressources/index.html</guid>
+      <description>L’organisme NIST (“National Institute of Standards and Technology”) maintient une base de donnée des vulnérabilités logicielles connues. Chacune des vulnérabilités qu’il répertorie est désignée par un code “CVE” (un identifiant unique), catégorisée par type et décrite de manière très détaillée.&#xA;Par exemple, la cyberattaque de 2020 visant le logiciel SolarWinds utilisé par le gouvernement américain a exploité la vulnérabilité CVE-2020-10148.&#xA;Cette base de données se nomme National Vulnerability Database (NVD) et son site officiel est à l’adresse https://nvd.</description>
+    </item>
+    <item>
+      <title>Nessus</title>
+      <link>http://localhost:1313/420-513/vuln/nessus/index.html</link>
+      <pubDate>Fri, 26 Jul 2024 13:04:27 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/vuln/nessus/index.html</guid>
+      <description>Nessus est un logiciel qui inspecte les hôtes d’un réseau à la recherche de vulnérabilités connues. Il est principalement utilisé par les administrateurs d’un réseau pour détecter les systèmes ayant besoin d’être mis-à-jour ou renforcés, mais il peut arriver que certains attaquants l’utilisent pour chercher les systèmes vulnérables sur un réseau.&#xA;Il existe une version gratuite de Nessus qui permet de scanner un maximum de16 adresses IP sur un réseau. C’est celle que nous allons installer ici.</description>
+    </item>
+    <item>
+      <title>Autres outils</title>
+      <link>http://localhost:1313/420-513/vuln/outils/index.html</link>
+      <pubDate>Fri, 26 Jul 2024 13:04:35 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/vuln/outils/index.html</guid>
+      <description>Les programmes utilisés pour la phase d’énumération ont aussi parfois des fonctionnalités permettant de découvrir des vulnérabilités. Dans cette section nous verrons comment nmap et wapiti peuvent être utilisés pour révéler certaines vulnérabilités spécifiques.&#xA;Scripts nmap Le programme nmap permet, comme on l’a vu précédemment, de découvrir les hôtes sur un réseau et découvrir les ports et les services actifs sur ces hôtes.&#xA;Ce programme dispose aussi du “nmap scripting engine” (ou NSE), une fonctionnalité de _scripting_permettant de créer des programmes pour automatiser l’exécution de nmap et effectuer certaines actions précises selon les résultats obtenus (le langage utilisé pour ces scripts est Lua).</description>
+    </item>
+  </channel>
+</rss>

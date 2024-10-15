@@ -1,0 +1,11 @@
+--2024-09-15 19:26:16--  https://gitlab.com/otardi/420-h4k/-/raw/master/static/images/act-nessus.png?ref_type=heads
+Resolving gitlab.com (gitlab.com)... 172.65.251.78, 2606:4700:90:0:f22e:fbec:5bed:a9b9
+Connecting to gitlab.com (gitlab.com)|172.65.251.78|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 58111 (57K) [image/png]
+Saving to: ‘act-nessus.png?ref_type=heads’
+
+act-nessus.png?ref_type=heads                 0%[                                                                                            ]       0  --.-KB/s               act-nessus.png?ref_type=heads               100%[===========================================================================================>]  56.75K  --.-KB/s    in 0.01s   
+
+2024-09-15 19:26:16 (3.77 MB/s) - ‘act-nessus.png?ref_type=heads’ saved [58111/58111]
+

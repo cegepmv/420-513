@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Collecte d&#39;informations :: 420-513</title>
+    <link>http://localhost:1313/420-513/collecte/index.html</link>
+    <description>La première étape de toute cyberattaque consiste à obtenir des informations sur la cible, informations qui permettent ensuite de définir notre stratégie. La reconnaissance peut porter sur les systèmes informatiques (les logiciels utilisés, leurs versions, leurs configurations) mais aussi sur des personnes ou des processus. Aussi, elle peut être très discrète ou au contraire relativement agressive. Elle peut avoir lieu à tout moment, tant au début de l’attaque que durant celle-ci.</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <lastBuildDate>Wed, 10 Jul 2024 13:25:08 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/420-513/collecte/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Passive</title>
+      <link>http://localhost:1313/420-513/collecte/passive/index.html</link>
+      <pubDate>Wed, 10 Jul 2024 13:25:00 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/collecte/passive/index.html</guid>
+      <description>La reconnaissance passive concerne les informations qu’on peut se procurer sans interagir avec la cible; généralement (mais pas toujours) ces informations sont de nature publique et ne sont pas confidentielles. Quelques exemples :&#xA;Les adresses IP des serveurs d’une entreprise; Les hauts dirigeants d’une entreprise; Les projets sur lesquels travaillent des personnes; L’adresse email de travail d’un individu; Les domaines, sous-domaines et noms d’hôtes Google dorks Les moteurs de recherche (Google, Bing ou autres), ou encore d’autres plateformes ayant un outil de recherche (GitHub, StackOverflow ou ServerFault, etc.</description>
+    </item>
+    <item>
+      <title>Active</title>
+      <link>http://localhost:1313/420-513/collecte/active/index.html</link>
+      <pubDate>Wed, 10 Jul 2024 13:25:08 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/collecte/active/index.html</guid>
+      <description>La reconnaissance active est caractérisée par le fait que les informations sont obtenues à la suite d’une interaction avec des entités reliées à la cible. Elle peut englober les opérations d’ingénierie sociale; ici cependant nous allons voir quelques outils sur Kali qui touchent à l’énumération des domaines et des services.&#xA;Attention La reconnaissance active n’est pas illégale en soi. Par contre, la loi punit l’utilisation d’outils informatiques de tous types lorsqu’ils sont utilisés “dans l’intention de commettre une infraction” (Code Criminel [1985] 342.</description>
+    </item>
+  </channel>
+</rss>

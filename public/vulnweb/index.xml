@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vulnérabilités Web :: 420-513</title>
+    <link>http://localhost:1313/420-513/vulnweb/index.html</link>
+    <description>Le code des applications et des sites web, qu’il s’exécute côté client ou côté serveur, peut receler des vulnérabilités. Étant donné que ces sites sont souvent facilement accessibles et sont fréquentés par de très grands nombres d’utilisateurs, ils constituent une cible de choix pour les pirate informatiques.&#xA;Dans cette section nous verrons 3 grandes catégories de vulnérabilités web: les injections SQL, les XSS (“Cross-site scripting”) et les CSRF (“Cross-site request forgery”).</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <lastBuildDate>Sun, 29 Sep 2024 17:27:43 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/420-513/vulnweb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Injection SQL</title>
+      <link>http://localhost:1313/420-513/vulnweb/sqlinj/index.html</link>
+      <pubDate>Sun, 29 Sep 2024 17:27:33 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/vulnweb/sqlinj/index.html</guid>
+      <description>Lorsqu’une application envoit des données à un serveur, elles sont transmises au serveur via une requête http POST ou GET. Lorsque la requête est de type GET, les données sont transmises par l’url; lorsque c’est une requête POST, les données sont transmises comme des paramètres.&#xA;Parfois ces données permettent au serveur de construire une requête SQL qui sera exécutée sur une base de données; le résultat de cette requête permet au serveur de construire la page présentée ensuite côté client.</description>
+    </item>
+    <item>
+      <title>XSS</title>
+      <link>http://localhost:1313/420-513/vulnweb/xss/index.html</link>
+      <pubDate>Sun, 29 Sep 2024 17:27:38 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/vulnweb/xss/index.html</guid>
+      <description>Le Cross-Site Scripting (XSS) est une vulnérabilité qui consiste à injecter du code Javascript malveillant sur un site afin que des utilisateurs légitimes téléchargent ce code malveillant à leur insu. Ce code peut avoir pour effet par exemple de rediriger l’utilisateur sur un site dangereux, ou encore envoyer des informations confidentielles (données personnelles, cookies d’authentification, etc.) à un tiers.&#xA;Un type de sites potentiellement vulnérables sont ceux où il est possible de créer du contenu, par exemple les forums de discussion ou les pages acceptant des commentaires.</description>
+    </item>
+    <item>
+      <title>CSRF</title>
+      <link>http://localhost:1313/420-513/vulnweb/csrf/index.html</link>
+      <pubDate>Sun, 29 Sep 2024 17:27:43 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/vulnweb/csrf/index.html</guid>
+      <description>Le Cross-Site Request Forgery consiste à profiter des permissions d’un utilisateur pour lancer des requêtes au serveur en son nom. Pour qu’une attaque CSRF fonctionne, deux conditions doivent être remplies:&#xA;La victime doit s’être authentifiée L’attaquant doit trouver une manière de faire exécuter une requête Pour la deuxième condition, une technique souvent utilisée est le phishing, par exemple lorsque l’attaquant incite la victime à cliquer sur un lien dans un courriel ou un message texte.</description>
+    </item>
+  </channel>
+</rss>

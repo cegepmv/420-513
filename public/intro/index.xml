@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Préalables :: 420-513</title>
+    <link>http://localhost:1313/420-513/intro/index.html</link>
+    <description>Dans ce module nous ferons une courte révision des notions essentielles au cours.</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <lastBuildDate>Thu, 11 Jul 2024 10:52:34 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/420-513/intro/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adressage IP</title>
+      <link>http://localhost:1313/420-513/intro/ip/index.html</link>
+      <pubDate>Tue, 09 Jul 2024 14:06:54 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/intro/ip/index.html</guid>
+      <description>Le protocole IP définit comment les hôtes peuvent communiquer entre eux dans un réseau informatique.&#xA;Il permet d’identifier ces hôtes au moyen d’une adresse. Les adresses IP peuvent avoir deux formats selon la version du protocole IP.&#xA;En IPv4:&#xA;Les adresses sont stockées sur 32 bits Il y a environ 4,3 milliards d’adresses possibles (2^32) Elles sont représentées par 4 nombres décimaux de 0 à 255 séparées par un point Exemples: 127.</description>
+    </item>
+    <item>
+      <title>Kali linux</title>
+      <link>http://localhost:1313/420-513/intro/kali/index.html</link>
+      <pubDate>Tue, 09 Jul 2024 14:07:23 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/intro/kali/index.html</guid>
+      <description>Kali est une distribution linux vouée à la cybersécurité: elle inclut une quantité impressionnante de programmes utiles pour toutes les tâches, de la capture du trafic sur un réseau à l’attaque d’applications web en passant par la rétro-ingénierie de programmes exécutables.&#xA;D’autres distributions de linux ont la même vocation (Backbox, ParrotOS, BlackArch pour linux et Commando VM du côté de Windows); mais Kali est certainement la plus répandue et une des mieux supportée.</description>
+    </item>
+    <item>
+      <title>Wireshark et tcpdump</title>
+      <link>http://localhost:1313/420-513/intro/wiredump/index.html</link>
+      <pubDate>Tue, 09 Jul 2024 14:07:43 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/intro/wiredump/index.html</guid>
+      <description>Le programme tcpdump sert à visualiser le contenu des communications qui passent sur une interface réseau. Les messages à destination de l’hôte local autant que ceux qui sont envoyés par l’hôte local peuvent être inspectés et analysés. Des fonctionnalités de filtrage avancées permettent d’isoler de manière très précise certains types de communication, ce qui fait de tcpdump un outil essentiel pour diagnostiquer des problèmes ou rechercher des informations sur les services et les hôtes d’un réseau.</description>
+    </item>
+    <item>
+      <title>SSH et SCP</title>
+      <link>http://localhost:1313/420-513/intro/ssh/index.html</link>
+      <pubDate>Tue, 09 Jul 2024 14:08:18 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/intro/ssh/index.html</guid>
+      <description>SSH (Secure Shell) est un service permettant d’établir une connexion chiffrée par ligne de commande (“shell”) sur un serveur distant.&#xA;SCP est un utilitaire pour transférer par SSH des fichiers entre deux hôtes sur un réseau.&#xA;Connexion simple Pour se connecter à un serveur SSH, il suffit de passer à la commande le nom d’utilisateur suivi du nom d’hôte (ou de son adresse) comme suit:&#xA;ssh marco@10.67.60.154Dans sa configuration par défaut, le service SSH est généralement configuré pour que les utilisateurs ordinaires du système puissent se connecter par mot de passe.</description>
+    </item>
+    <item>
+      <title>Netcat</title>
+      <link>http://localhost:1313/420-513/intro/netcat/index.html</link>
+      <pubDate>Thu, 11 Jul 2024 10:52:34 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/intro/netcat/index.html</guid>
+      <description>Parfois on souhaite établir une connexion avec un hôte mais sans utiliser le protocole ssh. L’utilitaire netcat (ou nc) permet une assez grande flexibilité à cette fin: en effet il ne fait qu’ouvrir une connexion TCP “brute” sur l’hôte; on peut ensuite utiliser cette connexion comme on le souhaite.&#xA;Ouvrir une connexion sur un port TCP distant Pour établir une connexion TCP avec un hôte distant il s’agit de lancer nc suivi de l’adresse et du port de destination; ensuite ce qui est saisi sur la ligne de commande sera transmis à l’hôte distant.</description>
+    </item>
+    <item>
+      <title>Phases d&#39;une cyberattaque</title>
+      <link>http://localhost:1313/420-513/intro/cybphases/index.html</link>
+      <pubDate>Tue, 09 Jul 2024 14:08:00 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/intro/cybphases/index.html</guid>
+      <description>Une cyberattaque comprend plusieurs étapes. Celles-ci peuvent être plus ou moins nombreuses selon les objectifs de l’attaque.&#xA;En anglais on utilise l’expression “cyber kill chain” (d’origine militaire) pour désigner ces étapes.&#xA;Il y a plusieurs opinions quant au nombre et à la nature de chacun de ces étapes, mais on peut les regrouper dans les phases suivantes:&#xA;Collecte d’informations Aussi appelée reconnaissance ou énumération. Consiste à recueillir le plus d’informations possibles sur la cible.</description>
+    </item>
+  </channel>
+</rss>

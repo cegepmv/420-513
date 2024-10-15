@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Énumération web :: 420-513</title>
+    <link>http://localhost:1313/420-513/enumweb/index.html</link>
+    <description>Le service le plus utilisé sur internet est sans aucun doute HTTP : un grand nombre d’applications utilisent ce protocole (au port TCP/80 ou TCP/443 en cas de chiffrement des données), et ainsi le potentiel d’exploitation des serveurs web est assez élevé.&#xA;Plusieurs programmes dans kali sont conçus pour énumérer spécifiquement les serveurs http. Nous en verrons quelques un des plus utiles dans ce module.</description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <lastBuildDate>Thu, 11 Jul 2024 12:48:46 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/420-513/enumweb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Analyse</title>
+      <link>http://localhost:1313/420-513/enumweb/analyse/index.html</link>
+      <pubDate>Thu, 11 Jul 2024 12:48:36 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/enumweb/analyse/index.html</guid>
+      <description>Dans cette section nous verrons quelques outils qui permettent d’obtenir des informations diverses sur un serveur web.&#xA;whatweb Donne des informations sur les diverses technologies détectées sur un serveur web. Comprend plusieurs niveaux “d’agressivité”: le niveau 1 (par défaut) ne fait qu’une requête sur le serveur; les autres font des requêtes supplémentaires selon les informations trouvées lors de la première requête.&#xA;Syntaxe whatweb URL OPTIONS&#xA;L’URL peut être un ou plusieurs noms, une adresse IP ou même une plage d’adresses IP.</description>
+    </item>
+    <item>
+      <title>Fuzzing</title>
+      <link>http://localhost:1313/420-513/enumweb/fuzzing/index.html</link>
+      <pubDate>Thu, 11 Jul 2024 12:48:46 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/enumweb/fuzzing/index.html</guid>
+      <description>Le fuzzing est une technique qui consiste à automatiser l’envoi de données à un système (une fonction, un exécutable, une application, des serveurs web, etc.) afin de voir comment répond ce système et ainsi obtenir des indices sur son fonctionnement.&#xA;Le fuzzing est souvent utilisé pour déboguer des programmes en testant comment ceux-ci réagissent face à des données erronées ou aléatoires; mais dans le contexte de la cybersécurité il s’apparente à une attaque par dictionnaire.</description>
+    </item>
+  </channel>
+</rss>

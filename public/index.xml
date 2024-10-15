@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Piratage éthique :: 420-513</title>
+    <link>http://localhost:1313/420-513/index.html</link>
+    <description> </description>
+    <generator>Hugo</generator>
+    <language>fr-ca</language>
+    <lastBuildDate>Sun, 29 Sep 2024 17:27:43 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/420-513/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Préalables</title>
+      <link>http://localhost:1313/420-513/intro/index.html</link>
+      <pubDate>Thu, 11 Jul 2024 10:52:34 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/intro/index.html</guid>
+      <description>Dans ce module nous ferons une courte révision des notions essentielles au cours.</description>
+    </item>
+    <item>
+      <title>Collecte d&#39;informations</title>
+      <link>http://localhost:1313/420-513/collecte/index.html</link>
+      <pubDate>Wed, 10 Jul 2024 13:25:08 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/collecte/index.html</guid>
+      <description>La première étape de toute cyberattaque consiste à obtenir des informations sur la cible, informations qui permettent ensuite de définir notre stratégie. La reconnaissance peut porter sur les systèmes informatiques (les logiciels utilisés, leurs versions, leurs configurations) mais aussi sur des personnes ou des processus. Aussi, elle peut être très discrète ou au contraire relativement agressive. Elle peut avoir lieu à tout moment, tant au début de l’attaque que durant celle-ci.</description>
+    </item>
+    <item>
+      <title>Énumération web</title>
+      <link>http://localhost:1313/420-513/enumweb/index.html</link>
+      <pubDate>Thu, 11 Jul 2024 12:48:46 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/enumweb/index.html</guid>
+      <description>Le service le plus utilisé sur internet est sans aucun doute HTTP : un grand nombre d’applications utilisent ce protocole (au port TCP/80 ou TCP/443 en cas de chiffrement des données), et ainsi le potentiel d’exploitation des serveurs web est assez élevé.&#xA;Plusieurs programmes dans kali sont conçus pour énumérer spécifiquement les serveurs http. Nous en verrons quelques un des plus utiles dans ce module.</description>
+    </item>
+    <item>
+      <title>Recherche de vulnérabilités</title>
+      <link>http://localhost:1313/420-513/vuln/index.html</link>
+      <pubDate>Fri, 26 Jul 2024 12:58:20 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/vuln/index.html</guid>
+      <description>Après la phase d’énumération, on dispose d’une foule d’informations sur la cible, notamment les serveurs, les applications et les versions de celles-ci. La phase suivante consiste à déterminer s’il existe des failles qui pourraient être exploitées. On nomme ces failles “vulnérabilités”.</description>
+    </item>
+    <item>
+      <title>Vulnérabilités Web</title>
+      <link>http://localhost:1313/420-513/vulnweb/index.html</link>
+      <pubDate>Sun, 29 Sep 2024 17:27:43 -0400</pubDate>
+      <guid>http://localhost:1313/420-513/vulnweb/index.html</guid>
+      <description>Le code des applications et des sites web, qu’il s’exécute côté client ou côté serveur, peut receler des vulnérabilités. Étant donné que ces sites sont souvent facilement accessibles et sont fréquentés par de très grands nombres d’utilisateurs, ils constituent une cible de choix pour les pirate informatiques.&#xA;Dans cette section nous verrons 3 grandes catégories de vulnérabilités web: les injections SQL, les XSS (“Cross-site scripting”) et les CSRF (“Cross-site request forgery”).</description>
+    </item>
+  </channel>
+</rss>
