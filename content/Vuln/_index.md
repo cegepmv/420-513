@@ -1,7 +1,6 @@
 +++
-title = 'Recherche de vulnérabilités'
-date = 2024-07-26T12:58:20-04:00
-draft = false
+archetype = "chapter"
+title = "Recherche de vulnérabilités"
 weight = 4
 pre = "4. "
 +++

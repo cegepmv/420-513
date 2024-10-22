@@ -29,17 +29,17 @@ Parfois ces données permettent au serveur de construire une requête SQL qui se
     <meta itemprop="dateModified" content="2024-09-29T17:27:33-04:00">
     <meta itemprop="wordCount" content="792">
     <title>Injection SQL :: 420-513</title><link rel="icon" href="/420-513/images/favicon.png" type="image/png">
-    <link href="/420-513/css/fontawesome-all.min.css?1729009528" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-513/css/fontawesome-all.min.css?1729009528" rel="stylesheet"></noscript>
-    <link href="/420-513/css/nucleus.css?1729009528" rel="stylesheet">
-    <link href="/420-513/css/auto-complete.css?1729009528" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-513/css/auto-complete.css?1729009528" rel="stylesheet"></noscript>
-    <link href="/420-513/css/perfect-scrollbar.min.css?1729009528" rel="stylesheet">
-    <link href="/420-513/css/fonts.css?1729009528" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-513/css/fonts.css?1729009528" rel="stylesheet"></noscript>
-    <link href="/420-513/css/theme.css?1729009528" rel="stylesheet">
-    <link href="/420-513/css/theme-red.css?1729009528" rel="stylesheet" id="R-variant-style">
-    <link href="/420-513/css/chroma-learn.css?1729009528" rel="stylesheet" id="R-variant-chroma-style">
-    <link href="/420-513/css/variant.css?1729009528" rel="stylesheet">
-    <link href="/420-513/css/print.css?1729009528" rel="stylesheet" media="print">
-    <script src="/420-513/js/variant.js?1729009528"></script>
+    <link href="/420-513/css/fontawesome-all.min.css?1729545557" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-513/css/fontawesome-all.min.css?1729545557" rel="stylesheet"></noscript>
+    <link href="/420-513/css/nucleus.css?1729545557" rel="stylesheet">
+    <link href="/420-513/css/auto-complete.css?1729545557" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-513/css/auto-complete.css?1729545557" rel="stylesheet"></noscript>
+    <link href="/420-513/css/perfect-scrollbar.min.css?1729545557" rel="stylesheet">
+    <link href="/420-513/css/fonts.css?1729545557" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-513/css/fonts.css?1729545557" rel="stylesheet"></noscript>
+    <link href="/420-513/css/theme.css?1729545557" rel="stylesheet">
+    <link href="/420-513/css/theme-red.css?1729545557" rel="stylesheet" id="R-variant-style">
+    <link href="/420-513/css/chroma-learn.css?1729545557" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/420-513/css/variant.css?1729545557" rel="stylesheet">
+    <link href="/420-513/css/print.css?1729545557" rel="stylesheet" media="print">
+    <script src="/420-513/js/variant.js?1729545557"></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.relBasePath='..\/..';
@@ -97,12 +97,12 @@ Parfois ces données permettent au serveur de construire une requête SQL qui se
 <p>Lorsqu’une application envoit des données à un serveur, elles sont transmises au serveur via une requête http POST ou GET. Lorsque la requête est de type GET, les données sont transmises par l&rsquo;url; lorsque c&rsquo;est une requête POST, les données sont transmises comme des paramètres.</p>
 <p>Parfois ces données permettent au serveur de construire une requête SQL qui sera exécutée sur une base de données; le résultat de cette requête permet au serveur de construire la page présentée ensuite côté client.</p>
 <p>Dans le formulaire d&rsquo;authentification suivant, lorsque l’utilisateur clique sur le bouton du formulaire, le navigateur web transmet les données du formulaire au serveur; ensuite celui-ci construit une requête SQL qu&rsquo;il envoit à la base de données du site:</p>
-<p><a href="#R-image-33fa842e89cdc00fa593828146932bc7" class="lightbox-link"><img alt="sqlinj" class="noborder lazy lightbox noshadow figure-image" loading="lazy" src="/420-513/images/sqlinj.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-33fa842e89cdc00fa593828146932bc7"><img alt="sqlinj" class="noborder lazy lightbox noshadow lightbox-image" loading="lazy" src="/420-513/images/sqlinj.png"></a></p>
+<p><a href="#R-image-6a28883fbcfc5ddcd675578265b2a385" class="lightbox-link"><img alt="sqlinj" class="noborder lazy lightbox noshadow figure-image" loading="lazy" src="/420-513/images/sqlinj.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6a28883fbcfc5ddcd675578265b2a385"><img alt="sqlinj" class="noborder lazy lightbox noshadow lightbox-image" loading="lazy" src="/420-513/images/sqlinj.png"></a></p>
 <p>Dans un cas normal, cette requête SQL retournera une rangée de données s’il existe un utilisateur nommée <code>admin</code> avec <code>abc-123</code> comme mot de passe, ou ne retournera rien sinon.</p>
 <p>Lorsque le programme chargé de construire la requête se contente de copier les valeurs entrées dans les champs du formulaire sans les vérifier, il est possible de générer des requêtes qui retourneront des résultats non souhaités. Par exemple, si on entre <code>' and 1=1; --</code> dans le champ <code>username</code> du formulaire, ces données seront insérées dans la requête à la BD:</p>
-<p><a href="#R-image-a2376575d81ed0caea2e6d909a5244f2" class="lightbox-link"><img alt="sqlinj_ex1" class="noborder lazy lightbox noshadow figure-image" loading="lazy" src="/420-513/images/sqlinj_ex1.png" style=" height: auto; width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a2376575d81ed0caea2e6d909a5244f2"><img alt="sqlinj_ex1" class="noborder lazy lightbox noshadow lightbox-image" loading="lazy" src="/420-513/images/sqlinj_ex1.png"></a></p>
+<p><a href="#R-image-665d317716d0ae1d304fa225ccc922a1" class="lightbox-link"><img alt="sqlinj_ex1" class="noborder lazy lightbox noshadow figure-image" loading="lazy" src="/420-513/images/sqlinj_ex1.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-665d317716d0ae1d304fa225ccc922a1"><img alt="sqlinj_ex1" class="noborder lazy lightbox noshadow lightbox-image" loading="lazy" src="/420-513/images/sqlinj_ex1.png"></a></p>
 <p>Or les caractères « - - » désignent des commentaires en SQL, et donc tout ce qui suit sera ignoré. La requête qui sera interprétée par SQL sera donc :</p>
 <div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> users <span style="color:#66d9ef">WHERE</span> username<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;&#39;</span> <span style="color:#66d9ef">or</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>;</span></span></code></pre></div><p>ce qui équivaut à :</p>
 <div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> users </span></span></code></pre></div><p>car <code>username='' or 1=1</code> est toujours vraie.</p>
@@ -183,12 +183,12 @@ Parfois ces données permettent au serveur de construire une requête SQL qui se
         <script>
           var contentLangs=['fr'];
         </script>
-        <script src="/420-513/js/auto-complete.js?1729009528" defer></script>
-        <script src="/420-513/js/lunr/lunr.min.js?1729009528" defer></script>
-        <script src="/420-513/js/lunr/lunr.stemmer.support.min.js?1729009528" defer></script>
-        <script src="/420-513/js/lunr/lunr.multi.min.js?1729009528" defer></script>
-        <script src="/420-513/js/lunr/lunr.fr.min.js?1729009528" defer></script>
-        <script src="/420-513/js/search.js?1729009528" defer></script>
+        <script src="/420-513/js/auto-complete.js?1729545557" defer></script>
+        <script src="/420-513/js/lunr/lunr.min.js?1729545557" defer></script>
+        <script src="/420-513/js/lunr/lunr.stemmer.support.min.js?1729545557" defer></script>
+        <script src="/420-513/js/lunr/lunr.multi.min.js?1729545557" defer></script>
+        <script src="/420-513/js/lunr/lunr.fr.min.js?1729545557" defer></script>
+        <script src="/420-513/js/search.js?1729545557" defer></script>
       </div>
       <div id="R-homelinks" class="default-animation">
         <hr class="padding">
@@ -271,8 +271,8 @@ BY-NC-SA
         </div>
       </div>
     </aside>
-    <script src="/420-513/js/clipboard.min.js?1729009528" defer></script>
-    <script src="/420-513/js/perfect-scrollbar.min.js?1729009528" defer></script>
-    <script src="/420-513/js/theme.js?1729009528" defer></script>
+    <script src="/420-513/js/clipboard.min.js?1729545557" defer></script>
+    <script src="/420-513/js/perfect-scrollbar.min.js?1729545557" defer></script>
+    <script src="/420-513/js/theme.js?1729545557" defer></script>
   </body>
 </html>
