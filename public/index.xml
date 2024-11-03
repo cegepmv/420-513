@@ -6,7 +6,7 @@
     <description> </description>
     <generator>Hugo</generator>
     <language>fr-ca</language>
-    <lastBuildDate>Sun, 29 Sep 2024 17:27:43 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 03 Nov 2024 15:07:15 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/420-513/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Préalables</title>
@@ -14,13 +14,6 @@
       <pubDate>Thu, 11 Jul 2024 10:52:34 -0400</pubDate>
       <guid>http://localhost:1313/420-513/intro/index.html</guid>
       <description>Dans ce module nous ferons une courte révision des notions essentielles au cours.</description>
-    </item>
-    <item>
-      <title>Exploitation</title>
-      <link>http://localhost:1313/420-513/exploitation/index.html</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/420-513/exploitation/index.html</guid>
-      <description>This is a new chapter.</description>
     </item>
     <item>
       <title>Collecte d&#39;informations</title>
@@ -49,6 +42,13 @@
       <pubDate>Sun, 29 Sep 2024 17:27:43 -0400</pubDate>
       <guid>http://localhost:1313/420-513/vulnweb/index.html</guid>
       <description>Le code des applications et des sites web, qu’il s’exécute côté client ou côté serveur, peut receler des vulnérabilités. Étant donné que ces sites sont souvent facilement accessibles et sont fréquentés par de très grands nombres d’utilisateurs, ils constituent une cible de choix pour les pirate informatiques.&#xA;Dans cette section nous verrons 3 grandes catégories de vulnérabilités web: les injections SQL, les XSS (“Cross-site scripting”) et les CSRF (“Cross-site request forgery”).</description>
+    </item>
+    <item>
+      <title>Exploitation</title>
+      <link>http://localhost:1313/420-513/exploitation/index.html</link>
+      <pubDate>Sun, 03 Nov 2024 15:07:15 -0500</pubDate>
+      <guid>http://localhost:1313/420-513/exploitation/index.html</guid>
+      <description>Il existe de très nombreuses manières d’exploiter les failles de sécurité, et souvent ceci nécessite des connaissances approfondies des programmes vulnérables et de leur contexte d’exécution. Cependant les méthodes d’exploitation cherchent principalement à accomplir deux choses: gagner accès à une ligne de commande sur la cible ou encore exécuter une commande sur la cible (les deux peuvent être étroitement reliés).&#xA;Dans ce chapitre nous verrons deux techniques d’exploitation: les shells inversés et les “buffer overflows”.</description>
     </item>
   </channel>
 </rss>

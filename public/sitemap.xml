@@ -14,11 +14,15 @@
   </url>
   <url>
     <loc>http://localhost:1313/420-513/vuln/index.html</loc>
-    <lastmod>2024-07-26T12:58:20-04:00</lastmod>
+    <lastmod>2024-07-26T13:04:35-04:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/420-513/vulnweb/index.html</loc>
     <lastmod>2024-09-29T17:27:43-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/420-513/exploitation/index.html</loc>
+    <lastmod>2024-11-03T15:07:15-05:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/420-513/intro/ip/index.html</loc>
@@ -87,6 +91,14 @@
   <url>
     <loc>http://localhost:1313/420-513/vulnweb/csrf/index.html</loc>
     <lastmod>2024-09-29T17:27:43-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/420-513/exploitation/revshell/index.html</loc>
+    <lastmod>2024-10-21T17:21:21-04:00</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:1313/420-513/exploitation/bof/index.html</loc>
+    <lastmod>2024-11-03T15:07:15-05:00</lastmod>
   </url>
   <url>
     <loc>http://localhost:1313/420-513/index.html</loc>
