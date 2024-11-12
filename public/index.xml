@@ -6,7 +6,7 @@
     <description> </description>
     <generator>Hugo</generator>
     <language>fr-ca</language>
-    <lastBuildDate>Sun, 03 Nov 2024 15:07:15 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 11 Nov 2024 13:48:32 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/420-513/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Préalables</title>
@@ -49,6 +49,13 @@
       <pubDate>Sun, 03 Nov 2024 15:07:15 -0500</pubDate>
       <guid>http://localhost:1313/420-513/exploitation/index.html</guid>
       <description>Il existe de très nombreuses manières d’exploiter les failles de sécurité, et souvent ceci nécessite des connaissances approfondies des programmes vulnérables et de leur contexte d’exécution. Cependant les méthodes d’exploitation cherchent principalement à accomplir deux choses: gagner accès à une ligne de commande sur la cible ou encore exécuter une commande sur la cible (les deux peuvent être étroitement reliés).&#xA;Dans ce chapitre nous verrons deux techniques d’exploitation: les shells inversés et les “buffer overflows”.</description>
+    </item>
+    <item>
+      <title>Automatisation</title>
+      <link>http://localhost:1313/420-513/automatisation/index.html</link>
+      <pubDate>Mon, 11 Nov 2024 13:48:32 -0500</pubDate>
+      <guid>http://localhost:1313/420-513/automatisation/index.html</guid>
+      <description>Dans ce chapitra nous verrons deux logiciels qui permettent d’automatiser les différentes phases d’une attaque: Metasploit et Burpsuite.</description>
     </item>
   </channel>
 </rss>
