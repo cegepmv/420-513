@@ -6,7 +6,7 @@
     <description> </description>
     <generator>Hugo</generator>
     <language>fr-ca</language>
-    <lastBuildDate>Mon, 11 Nov 2024 13:48:32 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 11 Nov 2024 13:48:45 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/420-513/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Préalables</title>
@@ -53,7 +53,7 @@
     <item>
       <title>Automatisation</title>
       <link>http://localhost:1313/420-513/automatisation/index.html</link>
-      <pubDate>Mon, 11 Nov 2024 13:48:32 -0500</pubDate>
+      <pubDate>Mon, 11 Nov 2024 13:48:45 -0500</pubDate>
       <guid>http://localhost:1313/420-513/automatisation/index.html</guid>
       <description>Dans ce chapitra nous verrons deux logiciels qui permettent d’automatiser les différentes phases d’une attaque: Metasploit et Burpsuite.</description>
     </item>
